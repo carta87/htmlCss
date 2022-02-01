@@ -1,0 +1,72 @@
+<!-- *Lista de selectores
+Existen distintas maneras de establecer el background color de una lista ordenada.
+CREAR
+Crea una regla CSS ol y establece el [[background color}} a: rgb(255, 192, 203)
+Crea una regla CSS li y establece el background color al valor RGB para lightYellow (usa los números 224 y 255).
+
+*Selectores con elementos múltiples.
+En esta tarea vas a usar diferentes colores para los objetos en cada lista. Esto es posible usando selectores descendentes,
+los cuales le dan style a los elementos que están dentro de otros elmentos.
+Por ejemplo, el siguiente código establece el color de los objetos dentro de una lista ordenada:
+ol li {
+  background-color: red;
+}
+
+*Selectores de descendientes con clases
+Los selectores descendentes pueden también hacer uso de las clases.
+Por ejemplo, esta regla le dará style a los elementos con la clase water que está dentro de un elemento con la clase animal:
+.animal .water {
+  background-color: rgb(210, 180, 140);
+} -->
+
+
+
+<!doctype html>
+<style>
+.vehicle .water {
+  background-color: rgb(224, 255, 255);
+}
+.animal .land {
+  background-color: rgb(144, 238, 144);
+}
+
+ol  {
+  background-color: rgb(255, 192, 203);
+}
+
+li {
+  background-color: rgb(255, 255, 224);
+}
+
+ul {
+  background-color: rgb(211, 211, 211);
+}
+
+.land.water {
+  text-decoration: underline;
+}
+
+</style>
+<title>Descendant selectors</title>
+<h1>Descendant selectors</h1>
+
+<h2>Vehicles</h2>
+
+<ol class="vehicle">
+  <li class="air">airplane
+  <li class="land">bicycle
+  <li class="water">canoe
+  <li class="land water">hovercraft
+  <li class="water">jetboat
+  <li class="land">truck
+</ol>
+
+<h2>Animals</h2>
+<ol class="animal">
+  <li class="land">dog
+  <li class="air">eagle
+  <li class="land water">frog
+  <li class="land water">seal
+  <li class="water">shark
+  <li class="water">whale
+</ol>

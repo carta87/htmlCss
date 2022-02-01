@@ -1,0 +1,64 @@
+<!-- *Revisar: % ancho y margen
+En las lecciones anteriores, establecimos anchos fijos y márgenes usando px. También establecemos % tamaños de ancho
+y márgenes para las imágenes. Revisemos usando un elemento diferente: body. Recuerda que, cuando establecemos un 
+tamaño mediante %, margin o width se ajusta en proporción al ancho de la pantalla o al ancho fijo del elemento primario.
+
+*Revisar: % con imágenes También utilizamos % con imágenes.
+Recuerda que las imágenes configuradas a un ancho de % se ajustarán a un tamaño según el tamaño de la pantalla o del elemento primario.
+
+*Agregar un borde y espaciado a img Las imágenes se configuraron en 50% para que entren uniformemente dentro del cuerpo.
+Veamos qué sucede cuando agregamos padding y border a una imagen.
+CREAR
+Agrega 5px solid blue border a cada imagen.
+Establece el padding de las imágenes en 5px.
+Establece el background-color de cada imagen en yellow
+
+*Configurar box-sizing: border-box Como agregamos espaciado y bordes a nuestras imágenes, ya no encajan de lado a lado.
+Para comprender esto, veamos este ejemplo:
+
+An image is placed inside an element (e.g. body element) that has a width of 400px. The image size is set to 50%, 
+which is 50% of the container. That means the total image width is 200px
+If we add padding of 20px and a border of 5px to the image, the total width of the image is now 250px
+Este es un problema cuando deseas que dos imágenes estén una al lado de otra en la misma línea, como puedes ver en nuestras
+dos imágenes en la pantalla del teléfono.
+
+La solución es usar el atributo box-sizing configurado en el valor border-box. Esto le indica al navegador que el ancho y la
+altura totales de la imagen «incluyen» el espaciado y el borde. En otras palabras, cuando configuras una imagen para que 
+sea de 200 píxeles y luego agregas espaciado y bordes, tu imagen no superará los 200 píxeles. Puedes ver un ejemplo debajo
+de las instrucciones.
+
+*Usar % para configurar el ancho y espaciado de los bordes Trabajemos un poco más con los porcentajes.
+CREAR
+Establece el border de las imágenes en 2%.
+El borde desaparece. Esto se debe a que no puedes usar % para establecer el ancho de los bordes.
+Elimina el borde y agrega padding configurado en 2%. Usaremos padding como borde en su lugar.
+Da a la imagen un margin de 2% para que no se toque con las demás.
+Reduce el width de la imagen a 29.333% -->
+
+<!doctype html>
+<title>Tamaño relativo</title>
+ 
+<style>
+html {
+  background-color: white;
+  font-size: 100%;
+}
+
+body {
+  background-color: pink;
+  width: 80%;
+  margin: 10%;
+}
+
+img {
+  background-color: yellow;
+  box-sizing: border-box;
+  margin: 2%;
+  padding: 2%;
+  width: 29.333%;
+}
+</style>
+
+Aquí hay algo de texto
+<br>
+<img src="/images/daughter1.jpg"><img src="/images/daughter1.jpg"><img src="/images/daughter1.jpg">

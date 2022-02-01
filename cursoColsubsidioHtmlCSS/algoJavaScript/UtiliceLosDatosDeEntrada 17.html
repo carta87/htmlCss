@@ -1,0 +1,66 @@
+<!doctype html>
+<title>Exercise calculator</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+}
+</style>
+
+<h1>Exercise Calculator</h1>
+
+<form  id="exerciseForm">
+  <label for="day1">Day 1</label>
+  <input id="day1" min="0" max="1440" type="number" value="0">
+  <br>
+  <label for="day2">Day 2</label>
+  <input id="day2" min="0" max="1440" type="number" value="0">
+  <br>
+  <label for="day3">Day 3</label>
+  <input id="day3" min="0" max="1440" type="number" value="0">
+  <br>
+  <label for="day4">Day 4</label>
+  <input id="day4" min="0" max="1440" type="number" value="0">
+  <br>
+  <label for="day5">Day 5</label>
+  <input id="day5" min="0" max="1440" type="number" value="0">
+  <br>
+  <label for="day6">Day 6</label>
+  <input id="day6" min="0" max="1440" type="number" value="0">
+  <br>
+  <label for="day7">Day 7</label>
+  <input id="day7" min="0" max="1440" type="number" value="0">
+  
+  <p>Total: <output id="totalOutput"></output>
+  <p>Average: <output id="averageOutput"></output>
+  
+  <p><button type="reset">Reset</button>
+</form>
+
+<script>
+function updateOutput() {
+  var total = day1.valueAsNumber + day2.valueAsNumber + day3.valueAsNumber + day4.valueAsNumber + day5.valueAsNumber + day6.valueAsNumber + day7.valueAsNumber;
+  totalOutput.value = total;
+  
+  var average = total / 7;
+  averageOutput.value = average.toFixed(1);
+}
+
+exerciseForm.oninput = updateOutput;
+
+
+//forma abreviada
+// exerciseForm.oninput = updateOutput;
+// day1.oninput = updateOutputB;
+// day2.oninput = updateOutputB;
+// day3.oninput = updateOutputB;
+// day4.oninput = updateOutputB;
+// day5.oninput = updateOutputB;
+// day6.oninput = updateOutputB;
+// day7.oninput = updateOutputB;
+</script>

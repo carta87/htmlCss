@@ -1,0 +1,271 @@
+
+<!doctype html>
+<!-- *Gradiente lineal 
+Para esta tarea, agregarás un linear gradient a los botones en index.html.
+Los gradientes lineales son nuevos en CSS3. Sin embargo, IE usaba su propia propiedad filter para darle soporte
+a los gradientes desde el 2000 (IE5.5) Safari y Chrome agregaron su propio -webkit-gradient en 2008. En 2010 W3C hizo
+las reglas para los linear-gradient, luego, un año después, cambiaron las reglas.
+Para más detalles acerca de todas las versiones de los gradientes, lee este artículo.
+
+En este curso usa estas cuatro versiones, que funcionan con IE10+, Opera 11.1+, Firefox 3.6+, Chrome 10+ y Safari 4+:
+background-image: -webkit-linear-gradient(left, green, yellow);
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -o-linear-gradient(left, green, yellow);
+background-image: linear-gradient(to right, green, yellow);
+
+*Gradientes multicolor
+Las gradientes pueden tener una lista de dos o más colores separados por: 
+Si un linear gradient no establece una dirección, va de arriba a abajo por defecto.
+Las siguientes líneas de código crean una gradiente con verde arriba y amarillo abajo:
+background-image:
+   linear-gradient(green, yellow);
+background-image:
+   linear-gradient(to bottom, green, yellow);
+
+*background-attachment
+En la tarea previa, la gradiente se reinicia debajo del reproductor de audio. La propiedad background-attachment es usada
+para hacer que el fondo vaya de la parte superior de la página, a la parte inferior de la misma.
+
+*Gradientes diagonales
+Como es mostrado en el demo, la dirección de los gradientes puede ser diagonal.
+background-image:
+   -webkit-linear-gradient(left top, red, blue);
+background-image:
+   -moz-linear-gradient(left top, red, blue);
+background-image:
+   -o-linear-gradient(left top, red, blue);
+background-image:
+   linear-gradient(to right bottom, red, blue);
+Observa que bottom right y right bottom funcionan igual, sin embargo, para este curso por favor pon "left" y "right" primero. -->
+
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Yatra+One&display=swap');
+
+
+body {
+  background-color: lightGreen;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -moz-linear-gradient(right top, rgba(240, 255, 240, .25),rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -o-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: linear-gradient(to left bottom, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+ 
+text-align: center;
+font-family: 'Yatra One', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+   user-select: none;
+   }
+/* falfa abreviar el font*/
+
+h1 {
+  color: rgb(105, 105, 105);
+  font-family: BenchNine, sans-serif;
+  font-size: 25px;
+  text-shadow: 1px 1px 2px white;
+   
+  }
+       
+nav a {
+  background: rgb(124, 252, 0);
+  background-image: -webkit-linear-gradient(lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(lawnGreen, greenYellow);
+  background-image: linear-gradient(lawnGreen, greenYellow);
+  
+  border: 1px solid rgb(50, 205, 50);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(144, 238, 144), inset 0 1px 0 rgb(240, 255, 240);
+  color: rgb(0, 100, 0);
+  display: block;
+  font-size: 18px;
+  margin: 10px auto;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px rgb(255, 255, 255);
+  width: 250px;
+ }
+ 
+a:hover {
+  background-image: -webkit-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: linear-gradient(to top, lawnGreen, greenYellow);
+ 
+}
+
+iframe {
+  background-color: white;
+  border: none;
+  }
+
+article {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  text-align: left;
+  }
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  }
+
+figure{
+  margin: 10px 5px;
+  padding: 5px 0px;
+  border-bottom: 1px gray dotted; 
+  border-top: 1px gray dotted;
+  color: gray;
+  text-align: center;
+}
+
+iframe{
+  background-color: white; 
+  border: none;
+}
+
+table{
+   border: 3px solid royalBlue;
+  border-collapse: collapse;
+  background: rgb(30, 38, 12);
+  color: rgb(191, 187, 128);
+}
+
+td,
+th{
+  border: 1px solid rgb(191, 187, 128);
+  padding: 3px;
+}
+
+.activity {
+  background-color: rgb(242, 255, 145);
+  color: rgb(0, 0, 0);
+} 
+
+.eat,
+.free,
+.other {
+   background-color: rgb(255, 255, 255);
+}
+
+footer, 
+header,
+section {
+  left: 0px;
+  padding: 5px;
+  position: fixed;
+  right: 0px;
+}
+
+header,
+footer {
+   background-color: rgb(120, 255, 120);
+   border: 2px solid rgb(223, 71, 191);
+   opacity: 0.7;
+}
+
+footer {
+  bottom: 0px;
+}
+
+header {
+  top: 0px;
+}
+
+section {
+  bottom: 30px;
+  top: 50px;
+  overflow: auto;
+}
+
+header a {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px;
+  width: 50px;
+}
+
+header nav {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header:hover {
+  opacity: 1;
+}
+@media print {
+  section { 
+  position: static;
+  }
+   header, 
+  footer { 
+    display: none;
+  }
+  audio,
+  header,
+  footer,
+  .video { 
+    display: none;
+  }
+  article {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
+}
+
+</style>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Miguel Tafur">
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+<title>Day3, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+
+<header>
+<a href="index.html"><img src="/images/caLogo.png" alt="ca logo" title="Code Avengers"></a>
+
+<nav>
+ <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+</nav>
+
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+<!-- este dia Despues del desayuno ir a un recorrido en la playa  -->
+<h1>Day 3 Activities</h1>
+<article>
+  <h2>Castillo de San felipe</h2>
+  <p>El Castillo San Felipe de Barajas es una fortificación localizada en la ciudad de Cartagena de Indias en Colombia. Su nombre real es Fuerte de San Felipe de Barajas.
+  <p> Está situado sobre un cerro llamado San Lázaro y fue construido en 1657 durante la época colonial española. 
+  
+  <h2>Recorrido por las murallas y puerto</h2>
+  <p>A partir de su fundación en el siglo xvi y durante toda la época virreinal española, Cartagena de Indias fue uno de los puertos más importantes de la América española.
+  <p>Con el paso del tiempo, Cartagena ha desarrollado su zona urbana conservando el centro histórico y convirtiéndose en uno de los puertos de mayor importancia de Colombia, del Caribe y del mundo, así como un célebre destino turístico.
+</article>
+
+<figure>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.98825822437!2d-75.53927104201634!3d10.422506015588727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f82af0c292b%3A0x56335e1e7a81b1c1!2sCastillo%20de%20San%20Felipe%20de%20Barajas!5e0!3m2!1ses!2sco!4v1638465440319!5m2!1ses!2sco" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+    <figcaption>
+     informacion tomada desde wikipedia  
+    </figcaption>
+</figure>>
+
+<figure class="video">
+    <iframe width="320" height="240" src="https://www.youtube.com/embed/D-RJ6E87WTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    <figcaption> 
+    video tomado youtube
+   </figcaption>
+</figure>
+</section>

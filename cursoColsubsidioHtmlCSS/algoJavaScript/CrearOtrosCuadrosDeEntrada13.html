@@ -1,0 +1,171 @@
+1.
+<!doctype html>
+<title>Password box</title>
+
+<h1>Guess the Secret Password...</h1>
+
+<input id="secretPassword" type="password">
+
+<script>
+function checkPassword() {
+  if (secretPassword.value == 'firewall') {
+  secretPassword.style.backgroundColor = 'lightGreen';
+  }
+}
+
+secretPassword.oninput = checkPassword;
+</script>
+
+
+
+
+
+2.
+
+<!doctype html>
+<title>Sign up page</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+input:invalid {
+  background-color: pink;
+}
+label {
+  display: inline-block;
+  width: 120px;
+}
+</style>
+
+<h1>Sign Up</h1>
+
+<p>Enter your details below:
+
+<p><label>Email address:</label> <input type="email">
+<p><label >Password:</label> <input type="password">
+<p><label >Website:</label> <input type="url">
+
+<p><button>Sign up</button>
+
+
+
+
+3.
+<!doctype html>
+<title>Color chooser</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+}
+</style>
+
+<h1>Color Choosers</h1>
+
+<p>Select your colors:
+
+<p><label>Background color:</label> <input id="backgroundColor" type="color">
+<p><label>Text color:</label> <input id="textColor" type="color">
+
+<script>
+function changeBackgroundColor(){
+    console.log(backgroundColor.value);
+  }
+  
+backgroundColor.oninput = changeBackgroundColor;
+</script>
+
+
+
+
+
+
+4.
+
+<!doctype html>
+<title>Color chooser</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+}
+
+</style>
+
+<h1>Color Choosers</h1>
+
+<p>Select your colors:
+
+<p><label>Background color:</label> <input id="backgroundColor" type="color">
+<p><label>Text color:</label> <input id="textColor" type="color">
+
+<script>
+function changeBackgroundColor() {
+  document.body.style.backgroundColor = backgroundColor.value;
+}
+
+backgroundColor.oninput = changeBackgroundColor;
+
+function changetextColor() {
+  document.body.style.color = textColor.value;
+}
+
+textColor.oninput = changetextColor;
+</script>
+
+
+
+
+5.
+
+<!doctype html>
+<title>Age app</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+input[readonly] {
+  background-color: lightBlue;
+}
+</style>
+
+<h1>Age App</h1>
+
+<p>Enter your details below:
+
+<p><label>Date of birth:</label> <input id="dateInput"  type="date" value="1990-01-01">
+<p><label>Time of birth:</label> <input id="timeInput"  type="time" value="00:00:00">
+<p><label>Your age is:</label> <input id="ageInput" readonly>
+
+<script>
+function updateAge() {
+  debugger;
+  var birthdate = dateInput.valueAsNumber + timeInput.valueAsNumber;
+  //Calculate your age in milliseconds
+  var ageInMillis = new Date().getTime() - birthdate;
+  var ageInYears = ageInMillis / 1000 / 60 / 60 / 24 / 365.242;
+  ageInput.value = ageInYears.toFixed(2) + ' years';
+}
+
+dateInput.oninput = updateAge;
+timeInput.oninput = updateAge;
+</script>

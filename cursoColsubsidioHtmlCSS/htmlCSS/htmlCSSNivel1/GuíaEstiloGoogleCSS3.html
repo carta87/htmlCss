@@ -1,0 +1,55 @@
+<!-- *Guía de estilo de Google Sería BASTANTE MOLESTO Leer UN LIBRO Que UsAra un mOntóN de estilos diferentes. Esto también es válido para el código de sitios web.
+Esta lección presenta las pautas de formato y estilo para el código CSS de la Guía de estilo de Google . Estas pautas ayudan a los estudiantes a escribir código que sea
+fácil de leer y entender. Líneas 4‑6 en el editor tienen 3 reglas CSS que son correctas, pero tienen un formato incorrecto. Siga las reglas del teléfono para hacer que el 
+diseño CSS sea el mismo que el código de ejemplo a continuación.
+*Sintaxis CSS: ' , " y ; Las dos reglas CSS sobre líneas 4‑12 son código CSS válido. Sin embargo, su diseño y formato rompe algunas reglas de la Guía de estilo de Google:
+Los nombres de fuentes con espacios deben estar entre comillas simples ' '
+Cada propiedad de CSS debe terminar con un punto y coma ;
+Los selectores múltiples en una regla deben escribirse en una línea cada uno.
+Puede hacer clic aquí para leer más sobre nombres de fuentes y punto y coma.
+*Propiedades en orden alfabético La Guía de estilo de Google también dice que hay que poner los nombres de propiedades en orden alfabético. 
+Eso hace que el código sea más fácil de leer cuando hay muchas propiedades en cada regla.
+*Encabezados sin negrita: font-weight En esta tarea nos tomamos un descanso de la Guía de estilo de Google. La propiedad de
+CSSfont-weight se usa para poner el texto en negrita o no en negrita (normal). Los encabezados están en negrita de manera predeterminada.
+En línea 13 la negrita se quita del encabezado h1 estableciendo la propiedad font-weight a normal . Eso hace que la fuente Impact sea más fácil de leer.
+*Propiedades abreviadas: font La Guía de estilo de Google recomienda usar propiedades abreviadas para establecer los valores de las propiedades CSS relacionadas en una sola línea.
+Las 3 propiedades en líneas 12‑14 se pueden reemplazar con la propiedad abreviada font: 
+font: normal 28px Impact, fantasy;
+Los valores deben colocarse en el orden correcto, es decir: font-weight font-size font-family
+*font establece todas las propiedades de fuentes en una declaración. font es la abreviatura para establecer 
+font-style, font-variant, font-weight, font-size/line-height y font-family -->
+
+<!doctype html>
+<title>Code Avengers, Style Guide</title>
+<style>
+html {
+  color: darkBlue;
+  font: bold 16px 'Courier New', monospace;
+}
+
+h1 {
+  font: normal 28px Impact, fantasy;
+}
+
+h2 {
+  font: bold 20px 'Century Gothic', sans-serif;
+}
+</style>
+
+<h1>Google Style Guide</h1>
+<p>The Google style guide helps you write code that is easy to read.
+
+<h2>CSS Formatting Guide</h2>
+<ol>
+  <li>Put 1 space before the <strong>{</strong>
+  <li>Put 2 spaces before property names
+  <li>Put 1 space before property values
+  <li>Put a <strong>;</strong> after property values
+  <li>Put each property on a new line
+  <li>Put each selector on a new line
+  <li>Use single quotes around property values when necessary
+  <li>A blank line separates each CSS rule
+  <li>Put properties in alphabetical order
+</ol>
+<h2>CSS Style Guide</h2>
+<p>Use shorthand properties where possible

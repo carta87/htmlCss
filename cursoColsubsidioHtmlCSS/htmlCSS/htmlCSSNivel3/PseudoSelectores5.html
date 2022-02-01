@@ -1,0 +1,78 @@
+<!-- * Usar el selector :first-letter ===agrega una regla que da estilo a la primera letra de un elemento.
+En esta lección, usarás más selectores CSS de pseudoclase para crear las características de fuente sofisticada que se suelen
+ usar en libros y revistas. La primera letra grande y decorativa de un párrafo se llama inicial
+
+*Combinación de selectores
+El selector de CSS p:first-letter crea una regla que establece los estilos de la primera letra de cada párrafo.
+En un artículo de revista, por lo general, solo el primer párrafo presenta una inicial.
+Combinemos el selector :first-letter con el selector :first-of-type para encontrar la primera letra en el primer párrafo,
+ de esta manera:     p:first-of-type:first-letter
+
+*Crear una letra capital con :first-letter
+Mainz Psalter, impreso por Johannes Gutenberg en 1457
+Una inicial que cae debajo de la primera línea del texto se llama letra capital.
+
+*Usar el selector :first-line  ===agrega una regla que da estilo a la primera línea de texto de un elemento.
+La pseudoclase :first-line se usa para seleccionar y configurar el estilo de la primera línea del texto en un elemento:
+
+p:first-line {
+  font-style: italic;
+}
+
+*Usar el selector :not para agregar estilos ===agrega una regla que da estilo a todos los elementos que no corresponden
+con lo que hay entre paréntesis ( ).... La pseudoclase :not() selecciona todos los elementos que no coinciden con lo que está entre paréntesis ():
+
+img:not(.big) {
+  border: 3px solid orange; -->
+}
+
+<!doctype html>
+<title>Styling-Paragraphs</title>
+
+<style>
+html {
+ padding: 15px;
+}
+
+h1 {
+  color: #990033; 
+  font: bold 40px 'Georgia', serif; 
+}
+
+article p:first-of-type:first-letter {
+  background-color: #eee;
+  color: #990033; 
+  float: left; 
+  font: 50px 'Georgia', serif; 
+  margin-right: 5px;
+  padding: 0 3px 0 3px;
+}
+
+p:first-line {
+ font-weight: bold;
+}
+p:not(.intro) {
+  margin-left: 20px;
+  padding-left: 20px ;
+  border-left: 2px solid gray;
+  font-style: italic;
+}
+</style>
+
+<article>
+  <h1>CSS Selectors</h1>
+  
+  <p class="intro">When using CSS to style your webpage, selectors are used to declare which part of the markup a style applies to by matching tags and attributes in the markup itself. This gives us more flexiblity to how we style a page.
+  
+  <p>Selectors may apply to all elements of a specific type, e.g. the second level headers h2, elements specified by attribute like id: an identifier unique to the document or class: an identifier that groups multiple elements in a document or
+  elements depending on how they are placed relative to others in the document tree.
+  
+  <p>Classes and IDs are case-sensitive, start with letters, and can include alphanumeric characters and underscores. Any number of instances of any number of elements may have the same class. Conventionally, IDs only apply to one instance of one element.
+  
+  <p>Pseudo-classes are used in CSS selectors to permit formatting based on information that is not contained in the document tree. One example of a widely used pseudo-class is :hover, which identifies content only when the user 'points to' the visible element, usually by holding the mouse cursor over it. It is appended to a selector as in a:hover or #elementid:hover. A pseudo-class classifies document elements, such as :link or :visited, whereas a pseudo-element makes a selection that may consist of partial elements, such as :first-line or :first-letter.
+</article>
+
+<footer>
+  <p>This article is part of the Code Avengers level 3 HTML/CSS courses.
+  <p>Enjoy fun and effective learning with <a href="https://codeavengers.com">CodeAvengers.com</a>!
+</footer>

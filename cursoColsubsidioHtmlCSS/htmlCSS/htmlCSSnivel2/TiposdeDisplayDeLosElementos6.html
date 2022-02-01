@@ -1,0 +1,77 @@
+<!-- *Propiedad display Esta lección es una continuación de la lección previa.
+Cada elemento HTML tiene una propiedad display. Hasta ahora, has usado elementos con 4 propiedades display:
+
+Block (bloque): audio, footer, h1, header, hr, ol, p, section, ul
+Inline (en línea): a, br, iframe, strong
+Inline-block (bloque en línea): img
+None (ninguno): link, meta, source, style, title 
+Los elementos con una propiedad display de none no se muestran en la página web.
+*Elementos block
+Los elementos block (ej. h2, p) expanden el ancho de la página; su altura se expande para acoplarse al texto 
+y los elementos que contiene. Algunos elementos block (ej. h2, p) tienen espacios margin automáticamente sobre y 
+debajo de ellos. El tamaño y espaciado pueden ser cambiados estableciendo las propiedades CSS de width, height, margin y padding.
+*Elementos inline
+Los elementos inline (ej. a, strong) se expanden al ancho y alto de sus contenidos. El tamaño de los elementos en línea no 
+puede ser cambiado con las propiedades CSS width y height.Las propiedades margin y padding agregarán espacio alrededor de un
+elemento inline. Sin embargo, sólo las propiedades izquierda y derecha cambiarán la posición del texto.
+*Elementos inline-block
+Las reglas para los elementos inline-block (ej. img) son combinaciones de block y inline.
+
+Como con los elementos block, puedes cambiar el tamaño y espaciado de un inline-block con las propiedades width, height, margin y padding.
+
+Una diferencia es que los elementos block '''se ponen bajo'' otros elementos automáticamente, mientras que los elementos
+inline e inline-block son puestos al lado de los elementos previos si hay espacio.
+*Cambiando la propiedad display
+Cada element HTML tiene una propiedad display por defecto. La propiedad CSS display se usa para cambiar la propiedad del elemento.
+Haz los siguientes cambios a la propiedad display. Antes de hacer cada cambio, ve si puedes adivinar qué pasa. -->
+
+<!doctype html>
+<title>Test page</title>
+<style>
+img {
+  background-color: red;
+  border: 4px solid blue;
+  padding: 0 2px 4px 8px;
+  padding-top: 24px;
+  width: 60px;
+  display: block;
+}
+
+h2,
+p {
+  border: 3px solid blue;
+  margin-top: 0;
+  padding: 10px;
+}
+
+a,
+strong {
+  border: 3px solid lime;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  width: 80px;
+}
+
+p {
+  height: 40px;
+}
+
+h2 {
+  width: 120px;
+  display: inline-block;
+  
+}
+
+</style>
+
+<h2>Cute Photos</h2>
+<h2>Cute Photos</h2>
+
+<img src="/images/daughter10.jpg"><img src="/images/daughter11.jpg"><img src="/images/daughter12.jpg"><img src="/images/daughter13.jpg">
+
+<p><strong>Pictures</strong> from <a href="http://focusstudio.co.nz">FocusStudio</a>

@@ -1,0 +1,104 @@
+<!-- *Eliminar CSS externo: <link> En las próximas 10 lecciones, aprenderemos a escribir nuestro propio código CSS para diseñar páginas.
+*Agregar CSS interno: <style> Hay dos formas de escribir código CSS. La primera forma es escribir CSS y HTML en archivos separados, luego enlazar los 2 archivos con 
+la etiqueta HTML <link>.  La segunda forma es poner CSS directamente en su código HTML, entre etiquetas <style>. Los archivos HTML tienen dos secciones, la head y body .
+Las etiquetas <style> que contienen CSS van en la sección de encabezado, junto con otras cosas que no se muestran en la página.
+*Reglas de CSS Echemos un vistazo más de cerca a esta regla de CSS :
+html {
+  background-color: blue;
+  color: yellow;
+}
+Línea 1 es el selector; selecciona qué partes de la página HTML tienen el estilo de esa regla. En este caso, es la etiqueta html, por lo que es toda la página.
+Líneas 2 & 3 son una lista de nombres de propiedad de CSS y valores . Aquí establecen los colores de fondo y texto para toda la página.
+*Selectores de CSS Las reglas de CSS que comienzan con html { establecerán el estilo de toda la página web. Una regla que comienza con h2 { solo establecerá 
+el estilo de los títulos de nivel 2. Una regla que comienza con ol, p { cambiará las listas ordenadas y los párrafos:
+ol,
+p {
+  background-color: blue;
+  color: yellow;
+}
+*Varias reglas Puede agregar más CSS para controlar diferentes propiedades de cada elemento. Todas las propiedades deben ir dentro de las llaves { } de la regla CSS.
+ También puede aplicar las reglas a varios elementos. Solo sepárelos con una coma: h2, p { 
+Por ejemplo, el siguiente código CSS tiene 2 reglas. Líneas 5‑7 establecer el color de fondo del encabezado ( h2 ) a green . 
+Líneas 1‑3 establecer el color de fondo para el resto de la página en orange :
+html {
+  background-color: orange;
+}
+ 
+h2 {
+  background-color: green;
+}
+*Letra y corchetes Al igual que las etiquetas y los atributos de HTML, CSS no distingue mayúsculas de minúsculas. Esto significa que CSS funcionará si el texto está en minúsculas 
+(consulte línea 7), mayúsculas (ver línea 8) o incluso caso mixto (ver línea 11). Sin embargo, la Guía de estilo de Google recomienda usar solo minúsculas (excepto para los 
+nombres de colores que tienen varias palabras, p. ej. lightGoldenRodYellow). También es muy importante abrir y cerrar los corchetes { } correctamente.
+*Diseñe bien las reglas de CSS En CSS, los espacios y las nuevas líneas se pueden eliminar (ver línea 16) y el CSS seguirá funcionando.
+Sin embargo, la Guía de estilo de Google recomienda diseñar su código muy bien, como en líneas 6‑14 .
+*Quite las etiquetas opcionales; ortografía
+En las lecciones 1 a 10 no usamos las etiquetas html, head y body. Si no tenemos esas etiquetas, el navegador web hará de cuenta que están ahí, y el código seguirá funcionando
+ igual. ¡Recuerde revisar la ortografía de sus propiedades y valores de CSS, y todos los caracteres de puntuación!
+ -->
+
+ <!doctype html>
+<html>
+  <head>
+    <title>Code Avengers, CSS</title>
+    <style>
+    html{ 
+      background-color: lightBlue;
+      color: gray;
+    } 
+    h2, ol {
+    	background-color: hotPink; 
+      color: blue;
+    }
+    </style>
+  </head>
+  <body>
+    <h2>Introducción a CSS</h2>
+    <p>En las lecciones 11 a 20 aprenderá lo básico sobre CSS
+    <p>Aprenderá a:
+    <ol>
+      <li>Cambiar colores
+      <li>Cambiar fuentes
+      <li>Cambiar tamaños
+      <li>Agregar bordes
+      <li>Usar imágenes para viñetas
+      <li>Crear encabezados y pies de página fijos
+    </ol>
+  </body>
+</html>
+
+<!-- 
+<!doctype html> -->
+
+  
+    <title>Code Avengers, errores comunes</title>
+    <style>
+    body {
+      background-color: paleGreen;
+    }
+    
+    ul,
+    h1 {
+      background-color: lightYellow;
+    }
+    
+    h1,
+    p {
+      color: red;
+    }
+    </style>
+  
+  
+    <h1>Errores comunes de CSS</h1>
+    <p>A continuación, se muestra una lista de errores comunes de CSS:
+    <ul>
+      <li>Nombres de etiquetas mal escritos o incorrectos
+      <li>Nombres de propiedades mal escritos o incorrectos
+      <li>Valores de propiedades mal escritos o incorrectos
+      <li>Falta de los dos puntos (:) después del nombre de una propiedad
+      <li>Falta del punto y coma (;) después de valores de propiedad
+      <li>Falta de la coma entre nombres de etiquetas (,)
+      <li>Falta {} alrededor de las propiedades
+    </ul>
+  
+

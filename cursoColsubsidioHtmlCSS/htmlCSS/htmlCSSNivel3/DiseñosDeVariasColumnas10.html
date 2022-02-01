@@ -1,0 +1,148 @@
+<!-- *Agregar un fondo semitransparente
+Hagamos que nuestro elemento nav se vea mejor haciendo que se destaque más. Haremos esto haciendo que el fondo sea semitransparente.
+
+*Usar display: inline-block
+Por defecto, los elementos de anclaje son elementos inline; por lo tanto, agregar una parte superior e inferior al 
+margin o padding no tiene ningún efecto. Podemos establecer una propiedad denominada display para cambiar esto. 
+La propiedad display nos permite definir cómo un elemento aparecerá en la pantalla. Podemos configurarlo en inline-block, 
+que mantiene los anclajes uno al lado del otro, como los elementos inline, pero nos permite establecer «ancho, altura, 
+márgenes y espaciado en todos los lados» del elemento.
+
+*Crear un diseño de dos columnas
+Queremos crear un «diseño de dos columnas». Si deseas colocar dos columnas que entren lado a lado, podemos usar los
+elementos article y aside, configurados a un ancho con %. Pero article y aside no son elementos inline-block.
+Podemos cambiar esto usando la propiedad CSS displaynuevamente. También usamos box-sizing: border-box; para que el 
+ancho que especificamos incluya cualquier borde o espaciado aplicado a esos elementos. Por defecto, los elementos
+inline-block mostrarán los caracteres con espacios en blanco alrededor en el archivo HTML. Por este motivo, aún después 
+de los cambios anteriores, verás que article y aside no entran lado a lado. Para corregir esto, debes eliminar cualquier 
+espacio entre las etiquetas </article> y <aside> en el editor de color.
+
+*Agregar vertical-align: top
+La propiedad vertical-align establece la posición de un elemento en la dirección vertical. La alineación vertical predeterminada
+de un elemento inline es  bottom. Para esta tarea final, alineemos los elementos <article> y <aside> en la parte superior. -->
+
+    <!doctype html>
+    <link rel="stylesheet" href="layout.css">
+    <title>Layout:Inline-block vs Float</title>
+     
+    <header>
+      <h1><img class="logo" height="50" src="/images/blog/mylogo.png">
+      CSS Notes</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Layout</a>
+        <a href="#">Colors</a>
+        <a href="#">Fonts</a>
+      </nav>
+    </header>
+     
+    <section>
+      <article>  
+        <img width="100%" class="right" src="/images/blog/after-float.png"> 
+        <h2>What is Float?</h2>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="_blank">Float</a> is a CSS positioning property which takes an element from its  normal flow and positions 
+        it along the left or right side of its container. The text and other inline elements will then wrap around it.
+        
+        <img width="100%"  class="left" src="/images/blog/before-float.png">
+        <h2>What is inline-block?</h2>
+        <p>An element set to inline-block just like <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements" target="_blank">inline</a>, will display  elements next to each other with the natural flow of the  text but then also allows you to control the width and height. Example of elements with the display type of inline-block in the image tag
+         
+        <h2>Applying Inline-blocks</h2>
+        <p><img width="100%" src="/images/blog/inline-block.png">
+      </article><aside><h2>Values of Float</h2>
+        <p><strong>Left:</strong> The element generates a block box that is floated to the left. Content flows on the right side of the box, starting at the top.
+        <p><strong>Right:</strong>
+        Similar to 'left', except the box is floated to the right, and content flows on the left side of the box.
+        <p><strong>None:</strong>
+        The box is not floated.
+        <p><strong>Inherit:</strong>
+        Takes the same specified value as the property for the element's parent.
+        <p><img width="100" src="/images/blog/wireframe-floata.png">
+      </aside>
+    </section>
+     
+    <footer>
+      <img width="200" src="/images/home/icon2.png">
+    </footer>
+
+    
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css2?family=julius+Sans+One);
+
+html {
+  background-color: #ccc;
+  font-family: 'Libre Baskerville', serif;
+
+}
+body {
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header,
+footer {
+  background-color: #1a9db0;
+  color: #fff;
+  text-align: center;
+  padding: 2%;
+}
+aside {
+  background-color: #eee;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 3%;
+  width: 35%;
+}
+nav a {
+  color: #fff;
+  font-size: 100%;
+  
+}
+.logo {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 150%;
+}
+section img {
+  width: 30%; 
+}
+.right {
+  float: right;
+  margin: 2%;
+}
+.left {
+  float: left;
+  margin: 2%;
+}
+article {
+  padding: 3%;
+  width: 65%;
+    box-sizing: border-box;
+  display: inline-block;
+}
+h1,
+h2,
+nav a {
+font-family: 'Julius Sans One', sans-serif;
+font-weight: bold;
+}
+nav a {
+  background-color: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  margin: 1% 4%;
+  text-decoration: none;
+}
+nav a:hover {
+  color: rgb(50, 80, 80); 
+}
+article,
+aside {
+  vertical-align: top;
+}
+    </style>

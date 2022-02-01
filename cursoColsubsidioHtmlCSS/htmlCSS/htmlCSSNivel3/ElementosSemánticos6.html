@@ -1,0 +1,157 @@
+<!-- *Crear un sitio web de varias columnas En HTML/CSS nivel 2, utilizaste la propiedad column-count de CSS para mostrar 
+el texto en varias columnas:En las próximas 5 lecciones, aprenderás a usar las propiedades de CSS inline-block y float
+para hacer más que solo controlar el flujo del texto. Aprenderás a ordenar elementos completos y a cambiarles el tamaño
+ para hacer que tus sitios sean geniales y fáciles de leer.
+
+*Configurar max-width
+Debido a que las personas navegan la Web desde diversos dispositivos, es importante asegurarse de que tu sitio web
+se vea bien en pantallas de diferentes tamaños. En los teléfonos, las páginas web suelen ocupar toda la pantalla.
+Sin embargo, en una computadora portátil de un ancho de 1280 píxeles o más, es posible que desees centrar el contenido 
+de la página web y asegurarte de que no se extienda demasiado. Una manera de hacerlo es usar la propiedad de CSS max-width 
+para darle al elemento un ''ancho máximo'''.
+
+*sar el elemento <aside>
+    En cursos anteriores, se te presentaron algunas etiquetas en HTML5: <header>, <footer>, <nav> y <article>
+    Estos son elementos semánticos. Los elementos semánticos tienen etiquetas que nos dicen algo sobre el contenido. 
+    Esto hace que sea más fácil estructurar e interpretar tu código.    Veamos otra etiqueta de HTML5 llamada <aside>. 
+    Especifica una sección de una página web cuyo contenido está relacionado con el contenido de alrededor, pero que no es
+    tan importante. Piensa en esta como una nota al margen; está relacionada, pero si se quita, las personas aún entenderían
+    de qué se trata tu página.
+
+*Posicionar el logotipo del encabezado
+La imagen del logotipo en el encabezado está ubicada demasiado arriba del encabezado de la página. Para ajustar la alineación 
+vertical de un elemento, usaremos la propiedad vertical-align.
+
+*vertical-align
+controla la alineación vertical de los elementos. baseline alinea la base del cuadro con la base principal. 
+top alinea la parte superior del cuadro con la parte superior principal. bottom alinea la parte inferior del cuadro con la
+parte inferior principal. middle alinea el punto medio vertical del cuadro con la mitad de la altura x (altura de x minúscula) 
+del principal.  Example values: baseline top bottom middle -->
+
+<!doctype html>
+
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css2?family=julius+Sans+One);
+
+html {
+  background-color: #ccc;
+  font-family: 'Libre Baskerville', serif;
+
+}
+body {
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header,
+footer {
+  background-color: #1a9db0;
+  color: #fff;
+  text-align: center;
+  padding: 2%;
+}
+aside {
+  background-color: #eee;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 3%;
+  width: 35%;
+}
+nav a {
+  color: #fff;
+  font-size: 100%;
+  
+}
+.logo {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 150%;
+}
+section img {
+  width: 30%; 
+}
+.right {
+  float: right;
+  margin: 2%;
+}
+.left {
+  float: left;
+  margin: 2%;
+}
+article {
+  padding: 3%;
+  width: 65%;
+    box-sizing: border-box;
+  display: inline-block;
+}
+h1,
+h2,
+nav a {
+font-family: 'Julius Sans One', sans-serif;
+font-weight: bold;
+}
+nav a {
+  background-color: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  margin: 1% 4%;
+  text-decoration: none;
+}
+nav a:hover {
+  color: rgb(50, 80, 80); 
+}
+article,
+aside {
+  vertical-align: top;
+}
+
+</style>
+<link rel="stylesheet" href="layout.css">
+<title>Layout:Inline-block vs Float</title>
+ 
+<header>
+  <h1><img class="logo" height="50" src="/images/blog/mylogo.png">
+  CSS Notes</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Layout</a>
+    <a href="#">Colors</a>
+    <a href="#">Fonts</a>
+  </nav>
+</header>
+ 
+<section>
+  <article>  
+    <img width="100%" class="right" src="/images/blog/after-float.png"> 
+    <h2>What is Float?</h2>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="_blank">Float</a> is a CSS positioning property which takes an element from its  normal flow and positions 
+    it along the left or right side of its container. The text and other inline elements will then wrap around it.
+    
+    <img width="100%"  class="left" src="/images/blog/before-float.png">
+    <h2>What is inline-block?</h2>
+    <p>An element set to inline-block just like <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements" target="_blank">inline</a>, will display  elements next to each other with the natural flow of the  text but then also allows you to control the width and height. Example of elements with the display type of inline-block in the image tag
+     
+    <h2>Applying Inline-blocks</h2>
+    <p><img width="100%" src="/images/blog/inline-block.png">
+  </article><aside><h2>Values of Float</h2>
+    <p><strong>Left:</strong> The element generates a block box that is floated to the left. Content flows on the right side of the box, starting at the top.
+    <p><strong>Right:</strong>
+    Similar to 'left', except the box is floated to the right, and content flows on the left side of the box.
+    <p><strong>None:</strong>
+    The box is not floated.
+    <p><strong>Inherit:</strong>
+    Takes the same specified value as the property for the element's parent.
+    <p><img width="100" src="/images/blog/wireframe-floata.png">
+  </aside>
+</section>
+ 
+<footer>
+  <img width="200" src="/images/home/icon2.png">
+</footer>
+
+

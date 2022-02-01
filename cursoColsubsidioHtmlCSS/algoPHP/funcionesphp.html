@@ -1,0 +1,47 @@
+<!-- *Comandos de PHP para publicaciones del blog
+WordPress es un software que te permite crear y administrar tu propio sitio web o blog. Implementa el idioma de codificación 
+de PHP y se usa en uno de nuestros cuatro sitios web. En esta lección, te presentaremos algunos comandos PHP básicos, 
+similares a los utilizados en WordPress. Los usarás para crear un índice de blog, una barra lateral y publicaciones del blog.
+Hay 4 valores que necesitamos ingresar en el código para que el navegador ejecute los comandos: título, imagen, autor y
+contenido.
+
+*Configurar una página del índice
+WordPress tiene muchos comandos PHP incorporados que se comportan como plug-ins, y agregan características y funcionalidades
+a un blog. Colocamos un comando entre etiquetas de script de PHP <?php ?> para usar ese comando:
+
+<?php get_header_image(); ?>
+Este ejemplo se usa para obtener la imagen del encabezado para un encabezado personalizado.
+
+Hemos creado algunos comandos similares para que usen al crear tu blog. En esta tarea, hemos configurado una página de índice 
+usando este comando:
+
+<?php create_index(); ?>
+Este comando buscará en todos los archivos en la carpeta del blog para encontrar cualquier valor para título, imagen y
+ contenido. Luego los mostrará prolijamente en index.php, en el formato que se muestra debajo de las instrucciones.
+
+*Combinar afirmaciones de PHP
+En este momento, estamos usando las tres instancias de PHP para incluir nuestro encabezado y pie de página en la página y 
+para usar el comando create_index().
+No necesitamos tres instancias de PHP separadas para hacer todo esto. Podemos colocar todas las instancias dentro de un 
+conjunto de etiquetas de script de PHP <?php ?> de esta manera:
+
+<?php
+require statement;
+function();
+include statement;
+?>
+
+*Vincular el blog con el índice
+Queremos que la página de inicio/índice del blog muestre esta lista de publicaciones del blog para que el usuario puede
+elegir qué publicación ver. Esto significa que podemos hacer que el enlace Blog en el elemento nav se vincule con index.php.
+
+ *Usar el comando create_sidebar()
+WordPress tiene un comando llamado get_sidebar() que carga una plantilla de barra lateral. Hemos creado un comando similar
+llamado create_sidebar(). En este momento, tenemos una barra lateral con otras publicaciones para que encuentre el lector.
+Está en <aside> en blog.php, pero hemos configurado esas publicaciones como no modificables. El comando create_sidebar() 
+creará automáticamente los valores título e imagen de cada publicación en nuestra carpeta del blog, junto con un fragmento
+del contenido de cada uno. Usar este comando implica que, cada vez que se escribe una nueva publicación, la barra lateral 
+se actualiza automáticamente.
+ -->
+
+

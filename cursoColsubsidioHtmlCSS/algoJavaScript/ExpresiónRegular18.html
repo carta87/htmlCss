@@ -1,0 +1,64 @@
+<!doctype html>
+<title>Phone number patterns</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+input:invalid {
+  background-color: lightYellow;
+}
+
+input:valid {
+  background-color: lightBlue;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+}
+</style>
+
+<h1>Phone numbers</h1>
+
+<p>Enter phone numbers below:
+
+<p><label>Phone number 1:</label> <input type="tel" pattern="1234567">
+<p><label>Phone number 2:</label> <input type="tel" pattern="0800 AVENGER">
+<p><label>Phone number 3:</label> <input type="tel" pattern="987-6543">
+
+<br>
+<p> ejercio 2 <br>
+
+<p><label>Phone number 1:</label> <input type="tel" pattern="\d\d\d\d\d\d\d">
+<p><label>Phone number 2:</label> <input type="tel" pattern="0800 \w\w\w\w\w\w\w">
+<p><label>Phone number 3:</label> <input type="tel" pattern="98\d-\d\d\d\d">
+
+
+<br>
+<p> ejercio 3 <br>
+
+
+<p><label>Phone number 1:</label> <input type="tel" pattern="\d{5,}">
+<p><label>Phone number 2:</label> <input type="tel" pattern="0800 \w{5,10}">
+<p><label>Phone number 3:</label> <input type="tel" pattern="\d{3}-\d{4}">
+
+
+<br>
+<p> ejercio 4 <br>
+
+
+<p><label>Phone number 1:</label> <input type="tel" pattern="[02468]\d{6}">
+<p><label>Phone number 2:</label> <input type="tel" pattern="[01][89]00 \w{5,10}">
+<p><label>Phone number 3:</label> <input type="tel" pattern="[\d() ]{7,}">
+
+
+<br>
+<p> ejercio 5 <br>
+
+
+<p><label>Phone number 1:</label> <input type="tel" pattern="[1-5]\d{6}">
+<p><label>Phone number 2:</label> <input type="tel" pattern="[01][5-9]00 [0-9A-Z]{5,10}">
+<p><label>Phone number 3:</label> <input type="tel" pattern="[1-46-9][\d() ]{6,}">
+

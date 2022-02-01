@@ -1,0 +1,278 @@
+<!-- *meta ventanilla
+Si ves tu página web en un teléfono real, el teléfono disminuirá el zoom y tu página se verá chica.
+En el nivel 1 del curso, usaste la etiqueta meta viewport para hacer que tus páginas se vieran mejor en los teléfonos móviles.
+
+*Otras etiquetas meta
+Las etiquetas meta contienen información acerca de la página que no es visible a los humanos. Estas etiquetas se ponen cerca
+de la parte superior del código y no tienen etiqueta de cierre, no usas </meta>. Hay una larga lista registrada de etiquetas
+ meta. En su mayoría, las más comunes tienen atributos name y content. Por ejemplo, la etiqueta meta author:
+
+<meta name="author" content="Author's Name">
+
+*Descripción y palabras clave
+Algunas etiquetas meta te dan información sobre tus páginas web a los motores de búsqueda como Google.
+La etiqueta meta description consiste de un enunciado corto que describe tu página web, usualmente se muestra en los
+resultados de una búsqueda en los motores de búsqueda.
+La etiqueta meta keywords da una lista de palabras clave relacionadas a tu sitio. Esta no es usada por Google, pero sí por
+ Yahoo y algunos motores de búsqueda pequeños.
+<meta name="keywords" content="Waitomo,caves,abseiling,adventure">
+
+*Etiquetas meta robot
+Un robot es un programa de computadora que es usado por los motores de búsqueda como Google para crear una lista de todas 
+las páginas en la World Wide Web, o Red Informática Mundial. Cuando un robot encuentra tu página principal, ve los contenidos 
+de tu página, y usa los enlaces (ej. las etiquetas anchor) en la página para encontrar el resto de tu sitio.
+La etiqueta meta robots dice a los robots cómo buscar tu sitio y qué páginas agregar a su lista.
+noindex le dice al robot que no agrege la página a la lista. <meta name="robots" content="noindex">
+nofollow le dice al robot que no busque páginas a las cuales enlaza la página actual. <meta name="robots" content="nofollow">
+Los otros valores posibles son
+Le instruye al motor de búsqueda que no almacene una copia archivada de la página.|noarchive
+y Le pide al motor de búsqueda que no incluya un fragmento de código de la página en sus resultados de búsqueda.|nosnippet
+El valor de content en robot puede incluir uno o más de estos valores.
+
+*Etiqueta meta charset
+Hay muchas maneras en que la computadora puede almacenar los carácteres en tu código. La etiqueta meta de codificación de 
+carácteres le dice a la computadora cómo almacenar los carácteres. La guía de estilo de Google recomienda usar una 
+codificación de carácteres llamada utf-8.
+Establece la codificación de carácteres al poner el siguiente código en la línea abajo de la etiqueta doctype:
+ <meta charset="utf-8">
+
+Al usar esta etiqueta te aseguras que texto como コードアベンジャーズ no termine viéndose como esto ????? -->
+
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="MIGUEL TAFUR">
+<meta name="geo.country" content="CA" >
+<meta name="geo.placename" content="Comunidad Valenciana" >
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+<meta name="robots" content="nofollow">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+
+<title>Index, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+
+<header>
+ <a href="index.html">
+   <img src="/images/caLogo.png" alt="ca logo" title="Code Avengers">
+</a>
+ <nav>
+  <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+ </nav>
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+  <h1>Plan Turistico Cartagena</h1>
+<!-- TODO: make the links look cooler -->
+
+  <nav>
+    <a href="plan.html">Plan</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+  </nav>
+  
+<!--TODO: unhide the video and article -->
+<br>
+<!-- This video . . . de youtube es una muestra de lo que ofrece la ciudad de cartagena -->
+
+<iframe width="320" height="180" src="https://www.youtube.com/embed/NVR0iObir_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+<iframe
+  src="https://es.wikipedia.org/wiki/Cartagena_de_Indias?printable=yes" width="320" frameborder="0">
+</iframe> -->
+
+
+<!-- This music . . .de audio al ingresar a la paguina -->
+  <audio  controls  loop>
+    <source src="/audio/background3.ogg" type="audio/ogg">
+    <source src="/audio/background3.mp3" type="audio/mpeg">
+</audio>
+</section>
+
+<style>
+
+    /*miguel tafur : cart_albert@hotmail.com*/
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Yatra+One&display=swap');
+
+
+body {
+  background-color: lightGreen;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -moz-linear-gradient(right top, rgba(240, 255, 240, .25),rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -o-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: linear-gradient(to left bottom, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+ 
+text-align: center;
+font-family: 'Yatra One', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+   user-select: none;
+   }
+/* falfa abreviar el font*/
+
+h1 {
+  color: rgb(105, 105, 105);
+  font-family: BenchNine, sans-serif;
+  font-size: 25px;
+  text-shadow: 1px 1px 2px white;
+   
+  }
+       
+nav a {
+  background: rgb(124, 252, 0);
+  background-image: -webkit-linear-gradient(lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(lawnGreen, greenYellow);
+  background-image: linear-gradient(lawnGreen, greenYellow);
+  
+  border: 1px solid rgb(50, 205, 50);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(144, 238, 144), inset 0 1px 0 rgb(240, 255, 240);
+  color: rgb(0, 100, 0);
+  display: block;
+  font-size: 18px;
+  margin: 10px auto;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px rgb(255, 255, 255);
+  width: 250px;
+ }
+ 
+a:hover {
+  background-image: -webkit-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: linear-gradient(to top, lawnGreen, greenYellow);
+ 
+}
+
+iframe {
+  background-color: white;
+  border: none;
+  }
+
+article {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  text-align: left;
+  }
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  }
+
+figure{
+  margin: 10px 5px;
+  padding: 5px 0px;
+  border-bottom: 1px gray dotted; 
+  border-top: 1px gray dotted;
+  color: gray;
+  text-align: center;
+}
+
+iframe{
+  background-color: white; 
+  border: none;
+}
+
+table{
+   border: 3px solid royalBlue;
+  border-collapse: collapse;
+  background: rgb(30, 38, 12);
+  color: rgb(191, 187, 128);
+}
+
+td,
+th{
+  border: 1px solid rgb(191, 187, 128);
+  padding: 3px;
+}
+
+.activity {
+  background-color: rgb(242, 255, 145);
+  color: rgb(0, 0, 0);
+} 
+
+.eat,
+.free,
+.other {
+   background-color: rgb(255, 255, 255);
+}
+
+footer, 
+header,
+section {
+  left: 0px;
+  padding: 5px;
+  position: fixed;
+  right: 0px;
+}
+
+header,
+footer {
+   background-color: rgb(120, 255, 120);
+   border: 2px solid rgb(223, 71, 191);
+   opacity: 0.7;
+}
+
+footer {
+  bottom: 0px;
+}
+
+header {
+  top: 0px;
+}
+
+section {
+  bottom: 30px;
+  top: 50px;
+  overflow: auto;
+}
+
+header a {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px;
+  width: 50px;
+}
+
+header nav {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header:hover {
+  opacity: 1;
+}
+@media print {
+  section { 
+  position: static;
+  }
+   header, 
+  footer { 
+    display: none;
+  }
+  audio,
+  header,
+  footer,
+  .video { 
+    display: none;
+  }
+  article {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
+}
+
+
+</style>

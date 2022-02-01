@@ -1,0 +1,177 @@
+<!-- *Reglas CSS con clases múltiples
+Las reglas CSS para elementos con 2 o más clases son creadas enlistando las clases, sin ningún espacio entre ellas.
+Por ejemplo, la siguiente regla cambia el color de los elementos con las clases odd y multiple-of-4:
+.odd.multiple-of-4 {
+  color: rgb(255, 255, 0);
+}
+
+*Clase even Para esta tarea vas a hacer que la tabla se vea como un tablero de damas chinas.
+
+*Nombres de clase
+Los nombres de clase por lo general se escriben en minúsculas, letras, números, _ y -. Además el nombre no debe empezar con un 
+número o con doble guión (--). Por ejemplo, estos son nombres de clase válidos: name  -name  n4m3  _a_e
+Estos son nombres de clase inválidos: 9ame  --name  *name .name ........Las reglas completas para los nombres de clase son un poco más complejas.
+Cuando un elemento pertenece a más de una clase, las clases son separadas por un espacio.
+Ej. <td class="even multiple-of-4">8
+
+*Prioridad de las reglas CSS.....La celda número 6 tienes dos clases, even y multiple-of-3. Si tienes reglas CSS 
+para ambas clases que establezcan el font-size, la 2a regla toma prioridad.
+
+*Reglas CSS con clases múltiples
+Las reglas CSS para elementos con 2 o más clases son creadas enlistando las clases, sin ningún espacio entre ellas.
+Por ejemplo, la siguiente regla cambia el color de los elementos con las clases odd y multiple-of-4:
+.odd.multiple-of-4 {
+  color: rgb(255, 255, 0);
+} -->
+
+<!doctype html>
+<style>
+    table{
+      border: 2px solid rgb(0, 0, 255);
+      height: 300px;
+      text-align: center;
+      width: 300px;
+    }
+</style>
+<title>Checker Board</title>
+<table>
+    <tr><td>1<td>2<td>3
+    <tr><td>4<td>5<td>6
+    <tr><td>7<td>8<td>9    
+</table>
+
+
+<!-- ejercicio 2
+<!doctype html> -->
+<style>
+table {
+  background-color: rgb(200, 0, 0);
+  border: 2px solid rgb(0, 0, 255);
+  border-collapse: collapse;
+  height: 300px;
+  text-align: center;
+  width: 300px;
+}
+.even{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);  
+}
+</style>
+<title>Checker Board</title>
+<h1>Checker Board</h1>
+
+<table>
+  <tr><td>1<td class="even">2<td>3
+  <tr><td  class="even">4<td>5<td  class="even">6
+  <tr><td>7<td  class="even">8<td>9
+</table>
+
+
+<!-- ejercio 3
+<!doctype html> -->
+<style>
+table {
+  background-color: rgb(200, 0, 0);
+  border: 2px solid rgb(0,0,255);
+  border-collapse: collapse;
+  font-size: 24px;
+  height: 300px;
+  text-align: center;
+  width: 300px;
+  
+}
+
+.even {
+  background-color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
+}
+
+.multiple-of-3 {
+  font-size: 48px;
+}
+
+
+</style>
+<title>Checker Board</title>
+<h1>Checker Board</h1>
+
+<table>
+  <tr><td >1<td class="even">2<td class="multiple-of-3">3
+  <tr><td class="even">4<td >5<td class="even multiple-of-3">6
+  <tr><td>7<td class="even">8<td class="multiple-of-3">9
+</table>
+
+<!-- ejercicio 4
+<!doctype html> -->
+<style>
+table {
+  background-color: rgb(200, 0, 0);
+  border: 2px solid rgb(0,0,255);
+  border-collapse: collapse;
+  font-size: 24px;
+  height: 300px;
+  text-align: center;
+  width: 300px;
+}
+
+.even {
+  background-color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+}
+
+.multiple-of-3 {
+  font-size: 48px;
+}
+</style>
+<title>Checker Board</title>
+<h1>Checker Board</h1>
+
+<table>
+  <tr><td>1<td class="even">2<td class="multiple-of-3">3
+  <tr><td class="even">4<td>5<td class="even multiple-of-3">6
+  <tr><td>7<td class="even">8<td class="multiple-of-3">9
+</table>
+
+
+
+<!-- ejercicio 5
+<!doctype html> -->
+<style>
+table {
+  background-color: rgb(200, 0, 0);
+  border: 2px solid rgb(0,0,255);
+  border-collapse: collapse;
+  font-size: 24px;
+  height: 300px;
+  text-align: center;
+  width: 300px;
+}
+
+.even {
+  background-color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+}
+td{
+  height: 100px;
+  width: 100px;
+}
+
+.multiple-of-3 {
+  font-size: 48px;
+}
+.even.multiple-of-3 {
+  font-size: 64px;
+  font-weight:solid;
+}
+</style>
+<title>Checker Board</title>
+<h1>Checker Board</h1>
+
+<table>
+  <tr><td>1<td class="even">2<td class="multiple-of-3">3
+  <tr><td class="even">4<td>5<td class="even multiple-of-3">6
+  <tr><td>7<td class="even">8<td class="multiple-of-3">9
+</table>
+

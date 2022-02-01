@@ -1,0 +1,77 @@
+<!-- *Convertir números decimales a hexadecimales
+En este curso, crearemos un sitio de blog sensible usando HTML y CSS. Antes de comenzar nuestro blog, 
+echaremos un vistazo a los números hexadecimales (o hex). Los números hexadecimales son una manera en la que los diseñadores
+web especifican colores en la Web; se ven de esta manera: #ebf349 #9af34d. Haz clic aquí para ver más colores hexadecimales.
+Solemos contar usando el sistema base 10 (decimal), el cual utiliza símbolos de 10. Hexadecimal es base 16; por lo tanto,
+ usa 16 símbolos que representan los números 0-15 (entonces A = 10 y F = 15):
+
+0 1 2 3 4 5 6 7 8 9 //Decimal
+0 1 2 3 4 5 6 7 8 9 A B C D E F //Hex
+Cuando pasamos la letra F, escribimos 10. En números hexadecimales, esto no significa diez. Significa un 16 más cero 1, entonces es el número 16.
+
+El número 17 se escribe como un 16 más un 1 u 11. También puedes ver esto para los primeros números después de 15 en la tabla de abajo:
+
+Dec 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Hex 1 2 3 4 5 6 7 8 9  A  B  C  D  E  F 10 11 12 
+
+*Convierte números de hex a decimal
+Bien, ahora intentemos hacerlo al revés.
+Esta es la tabla por si la necesitas:
+
+Dec 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Hex 1 2 3 4 5 6 7 8 9  A  B  C  D  E  F 10 11 12 13
+
+*Convertir números hex de 2 dígitos a decimales
+El sistema decimal (base 10) utiliza símbolos de 10. Con hasta 2 dígitos, puedes hacer 100 números, del 0 al 99.
+El sistema hex (base 16) usa 16 símbolos. Con hasta 2 dígitos, puedes hacer 256 números, ¡del 0 hasta el 255!
+El número hex FF es igual al número decimal 255. Para convertir números hex de 2 dígitos a decimales:
+
+Multiplica el 1.++°++ dígito hex por 16.
+Suma el 2.++°++ dígito hex.
+He aquí algunos ejemplos de cómo convertir de hex a decimal:
+
+22  2 x 16 + 2 = 34
+9A  9 x 16 + 10 = 154
+B8  11 x 16 + 8 = 184
+FF  15 x 16 + 15 = 255
+
+*Convierte RGB a HEX
+Los colores en la pantalla de tu computadora están compuestos por diferentes cantidades de luz red, green y blue.
+Cuando establecemos los colores en CSS, le indicamos a la computadora cuánto rojo, verde y azul se usará con colores en
+RGB o colores en hex. Ambos nos permiten establecer la cantidad de cada color con un número entre 0 y 255.
+
+En RGB, escribimos un número de 0 a 255 para cada uno. Para hex, hacemos lo mismo, pero con 2 dígitos hex de 00 a ff:
+
+rgb(red, green, blue)  //Colores en RGB
+#rrggbb  //Colores en hex
+Veamos algunos ejemplos de códigos de color en hex y en RGB:
+
+NAME	RGB	HEX	EXPLANATION
+red
+rgb(255,0,0)
+#ff0000
+full red, no green or blue
+green
+rgb(0,255,0)
+#00ff00
+full green, no red or blue
+blue
+rgb(0,0,255)
+#0000ff
+full blue, no red or green
+black
+rgb(0,0,0)
+#000000
+no red, green or blue
+gray
+rgb(120,120,120)
+#808080
+half red, green and blue
+white
+rgb(255,255,255)
+#ffffff
+full red, green and blue
+Recuerde que el número hexadecimal ff es 255 en decimal. -->
+
+
+

@@ -1,0 +1,107 @@
+<!-- *Usar el selector de pseudoclase
+En el nivel 1, aprendiste cómo usar el selector de CSS :hover para establecer el estilo de los elementos cuando movemos el puntero sobre ellos.
+Los selectores que comienzan con : se llaman selectores de pseudoclase.
+En esta lección, usarás otros selectores de pseudoclase a medida que creamos la galería de imágenes.
+El selector de pseudoclase :first-of-type apunta a la primera ocurrencia de cada tipo de elemento de HTML que está 
+dentro de otro elemento. Prueba agregar esta regla de CSS a tu código (puedes hacer clic para copiar):
+
+:first-of-type {
+border: 5px solid orange;
+}
+Esta regla de CSS coloca un borde orange alrededor de los primeros elementos h1, h2 y section, junto con la primera imagen dentro
+de estos elementos. Ahora intenta agregar esta regla de CSS a tu código:
+
+img:first-of-type {
+  border: 5px solid blue;
+}
+Esta regla coloca un borde blue solo alrededor de la primera imagen dentro de cada elemento.
+
+*Usar el selector :first-of-type ===== agrega una regla que da estilo a la primera aparición de un elemento.
+Un elemento dentro de un elemento es un elemento «anidado».
+Fotos Como viste en la tarea 1, img:first-of-type selecciona la primera imagen dentro de ''cada''' elemento.
+Hay una manera de encontrar la primera imagen de los elementos específicos.
+Como ejemplo, el siguiente código se podría utilizar para establecer el estilo de la primera imagen dentro de cada header 
+elemento de una página:
+
+header img:first-of-type {
+  border: 10px inset crimson;
+}
+
+*Usar el selector :last-of-type ==== agrega una regla que da estilo a la última aparición de un elemento.
+El selector de pseudoclase :last-of-type encuentra la última ocurrencia de cada tipo de etiqueta HTML dentro de un elemento.
+Ahora definamos el estilo de la última imagen en nuestras secciones.
+
+*Seleccionar elementos con :nth-of-type(even) ==== agrega una regla que da estilo a cada elemento que sea el enésimo hijo, de un tipo particular, de su padre.
+Example values: odd even 3n+ o  3
+Ahora aumentemos el espacio entre imágenes adyacentes. Una manera de hacer esto es agregar un margen derecho a cada imagen
+usando la propiedad margin. El problema de hacer esto es que deja demasiado espacio a la derecha de la página.
+
+*Seleccionar elementos con :nth-of-type(odd) :nth-of-type
+agrega una regla que da estilo a cada elemento que sea el enésimo hijo, de un tipo particular, de su padre.
+Example values: odd even 3n+0 3 -->
+
+
+<!doctype html>
+<title>Adding Style</title>
+<style>
+html {
+  font-family: 'Century Gothic', sans-serif;
+  margin: 15px;
+  text-align: center;
+}
+
+h1 img {
+  margin: 5px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+section img {
+  background-color: beige; 
+  border: 10px ridge tan;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 33%;
+}
+
+section img:first-of-type {
+  background-color: seashell;
+  border: 10px inset crimson;
+}
+
+section img:last-of-type {
+  background-color: lightCyan; 
+  border: 10px inset teal;
+}
+
+section img:nth-of-type(even) {
+  margin-left: 15px;
+}
+
+section img:nth-of-type(odd) {
+  border-radius: 60px;
+}
+</style>
+
+<h1>
+  <img width="50" src="/images/icons/red-camera.png">
+  Baby Photos
+</h1>
+
+<h2>New Born</h2>
+<section>
+  <img src="/images/daughter2.jpg">
+  <img src="/images/daughter3.jpg">
+  <img src="/images/daughter5.jpg">
+  <img src="/images/daughter7.jpg">
+  <img src="/images/daughter8.jpg">
+</section>
+
+<h2>1 Year Old</h2>
+<section>
+  <img src="/images/daughter20.jpg">
+  <img src="/images/daughter21.jpg">
+  <img src="/images/daughter22.jpg">
+</section>
+
+

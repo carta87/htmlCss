@@ -1,0 +1,33 @@
+<!-- *Colores RGB            Hasta ahora, has establecido los colores en CSS usando los 140 nombres de colores.
+En esta lección vas a usar los valores de color RGB, que usan una mezcla de red, green y blue para hacer un color específico. 
+La cantidad de rojo, verde y azul son números del 0 al 255, ¡eso da un total de 16,777,216 posibles colores!
+El siguiente código hace al texto color red:
+color: rgb(255, 0, 0);
+El siguiente código hace al fondo color green:
+background-color: rgb(0, 255, 0);
+El valor de black es: rgb(0, 0, 0)
+El valor de white es: rgb(255, 255, 255)
+*Herramienta de color RGB Imagina que estás en un cuarto negro con linternas red, green y blue. Si iluminas el mismo lugar
+de la pared con las 3 linternas, verás luz blanca.
+Prueba nuestra herramienta de mezcla de color RGB. Desliza las 3 barras hasta la derecha para encender las 3 luces.
+*Colores semitransparentes  HTML5 tiene una manera de establecer colores semitransparentes usando RGBA (red, green, blue, alpha).
+El valor alpha es un número decimal entre 0 y 1 que establece que tan transparente es el color. Un valor de 1 es un color sólido;
+                            0 es completamente transparente; 0.5 es semitransparente.
+Por ejemplo, un yellow semitransparente se establece usando el código: rgba(255, 255, 0, 0.5) -->
+
+<!doctype html>
+<title>RGB Color Test</title>
+<style>
+body {
+  background-color: rgb(255, 160, 122);
+  color: rgb(0, 128, 128);
+}
+h1{
+  background: rgb(255, 0, 0, 0.25);
+  border: solid 1px rgb(255, 0, 0, 1);
+  border-radius: 4px; 
+  padding: 8px;
+}
+</style>
+
+<h1>RGB Color Test</h1>

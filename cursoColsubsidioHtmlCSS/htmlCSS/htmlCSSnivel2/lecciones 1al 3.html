@@ -1,0 +1,506 @@
+<!-- 
+              leccion 1. Crear un sitio web básico
+    
+    *doctype y title La página etiquetada como test2.html no es parte de tu plan de viaje, pero es para que experimentes con ella.
+Esta lección repasa algunos conceptos de HTML del nivel 1 mientras escribes la página index.html.
+Para la primera tarea, vamos a agregar dos elements que son necesarios para hacer una página HTML válida
+*Encabezado Este curso sigue la guía de estilo de Google, un conjunto de reglas para escribir código que es muy fácil de comprender. 
+Lee nuestro resumen de la guía de estilo para que te des una idea.
+En XHTML tienes que tener las etiquetas <html>, <head> y <body>; en HTML4 y HTML5 esas etiquetas son opcionales y son automáticamente insertadas por el navegador web si se omiten.
+    La guía de estilo Google recomienda omitir TODAS las etiquetas opcionales; en Code Avengers seguimos esa regla.
+    También en XHTML todas las etiquetas necesitan una etiqueta de cierre, en HTML4 y HTML5 muchas etiquetas son opcionales, por ejemplo </p> y </li>.
+    Algunas etiquetas como <br> no tienen una etiqueta de cierre, entonces una / se escribe antes del cierre de la etiqueta >, por ejemplo, 
+    <br/>. En HTML4 y HTML5 debes escribir <br>, pero igual funcionará perfectamente si escribes <br/>.
+    El código XHTML aún funciona en una página de HTML5. Si quieres escribir código XHTML en Code Avengers lo puedes hacer.
+    Sin embargo, la mayoría de nuestros ejemplos en el sitio siguen la guía de estilo de Google. Creemos que seguir la guía
+    de estilo hace que sea más fácil leer tu código. para más información sobre la guía de estilo de Google.
+*Etiquetas anchor y break
+El index.html necesita enlances para las otras cuatro páginas de HTML. La página de ejemplo utiliza el siguiente código para 
+el 1er enlace: <a href="plan.html">Plan</a>El enlace a la página de inicio de Code Avengers necesita un / al inicio porque 
+está en una carpeta distinta que la de la página de índice. Un / no es necesario cuando se enlaza a una página de la misma carpeta.
+*doctype y title para cada página Para la última tarea en esta lección vas a agregar código para las otras cuatro páginas HTML. 
+Después puedes verificar que tus enlaces funcionen de manera correcta.
+
+
+            leccion 2. Aplicar estilo a fuentes con CSS externas
+
+*Hojas de estilo externas En las lecciones 1-10 del nivel 1 del curso, agregaste estilo a tus páginas enlazando una hoja de estilo css
+externa que creamos para ti. Después en las lecciones 11-20 agregaste estilo escribiendo código CSS directamente en tu código HTML dentro de la 
+etiqueta <style>. En este curso vas a escribir tu propia hoja de estilo CSS externa llamada styles.css, y enlazarla con la etiqueta link.
+
+
+            leciion 3. Insertar multimedia, <audio>, <iframe>
+
+*Controles de audio En esta lección vamos a agregar audio y video a nuestra página. Una de las nuevas etiquetas de HTML es la de audio. 
+La etiqueta de audio tiene ciertos atributos que cambian la manera en la que funciona. El atributo controls se usa para hacer que el navegador
+ muestre controles que permiten al usuario controlar el volumen del audio y la reproducción.
+*Fuente de audio Ahora vamos a establecer el archivo de audio que se reproduce al poner elementos source dentro del elemento audio.
+
+El siguiente código agrega el tema musical de Code Avengers a la página de inicio.
+<audio controls>
+  <source src="/audio/CodeAvengersTheme.ogg"
+    type="audio/ogg">
+  <source src="/audio/Code AvengersThemeSong.mp3"
+    type="audio/mpeg">
+</audio>
+
+El elemento source le indica al web browser qué archivo de audio reproducir.Necesitas dos elementos fuente, porque no hay
+formato de audio que sea soportado por todos los navegadores, principalmente por cuestiones legales. El formato Ogg no es soportado por IE y Safari.
+MP3 no es soportado por Opera. Firefox tiene soporte completo para Ogg y soporte limitado para MP3.
+El atributo type es recomendado pero no requerido.
+*Atributos autoplay y loop Además del atributo controls, puedes agregar el atributo autoplay para reproducir música al momento en que 
+la página se carga. El atributo loop se utiliza para hacer que se reproduzca la música de nuevo desde el principio en el momento en que esta se termina.
+*Elemento iframe El elemento iframe (abreviación de inline frame) se utiliza para poner otra página web dentro de tu página. En esta tarea vas a utilizar 
+el elemento iframe para poner un reproductor de video YouTube en tu página. El video en el ejemplo se agregó con el siguiente código:
+
+<iframe frameborder="1" height="140" width="340" src="http://www.youtube.com/embed/64qx95Ckrwc"></iframe>
+
+*iframe de Wikipedia Sitios web como Facebook y Google no permiten mostrar sus páginas en un iframe. Si intentas hacerlo, te aparecerá una caja de mensaje vacía. 
+Sin embargo, muchos sitios trabajan con iframes. Por ejemplo, el siguiente código se utiliza para poner un artículo de Wikipedia acerca de la letra A en tu página:
+
+<iframe src="http://wikipedia.org/wiki/A?printable=yes"></iframe>
+Al poner ?printable=yes al final de tu URL de Wikipedia, se esconde el logotipo y la barra de herramientas, y sólo se muestra el contenido del artículo.
+-->
+
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="MIGUEL TAFUR">
+<meta name="geo.country" content="CA" >
+<meta name="geo.placename" content="Comunidad Valenciana" >
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+<meta name="robots" content="nofollow">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+
+<title>Index, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+
+<header>
+ <a href="index.html">
+   <img src="/images/caLogo.png" alt="ca logo" title="Code Avengers">
+</a>
+ <nav>
+  <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+ </nav>
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+  <h1>Plan Turistico Cartagena</h1>
+<!-- TODO: make the links look cooler -->
+
+  <nav>
+    <a href="plan.html">Plan</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+  </nav>
+  
+<!--TODO: unhide the video and article -->
+<br>
+<!-- This video . . . de youtube es una muestra de lo que ofrece la ciudad de cartagena -->
+
+<iframe width="320" height="180" src="https://www.youtube.com/embed/NVR0iObir_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+<iframe
+  src="https://es.wikipedia.org/wiki/Cartagena_de_Indias?printable=yes" width="320" frameborder="0">
+</iframe> -->
+
+
+<!-- This music . . .de audio al ingresar a la paguina -->
+  <audio  controls  loop>
+    <source src="/audio/background3.ogg" type="audio/ogg">
+    <source src="/audio/background3.mp3" type="audio/mpeg">
+</audio>
+</section>
+
+
+<!-- 
+<!doctype html> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Miguel Tafur">
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+<!-- TODO: agregar una table con la agenda diaria -->
+<title>Plan, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+<header>
+<a href="index.html"><img src="/images/caLogo.png" alt="ca logo" title="Code Avengers"></a>
+
+<nav>
+ <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+</nav>
+
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+<h1>plan Activities</h1>
+<table>
+  <tr><th>Time<th><a href="day1.html">Day 1</a><th><a href="day2.html">Day 2</a><th><a href="day3.html">Day 3</a>
+  <tr><td>0800<td rowspan="2" class="other"> travel<td rowspan="5"> travel<td rowspan="4" class="activity"> travel
+  <tr><td>0900
+  <tr><td>1000<td rowspan="2"class="activity">Haggas Honking Holes
+  <tr><td>1100 
+  <tr><td>1200<td rowspan="2"> free time<td rowspan="3" class="free"> travel
+  <tr><td>1300  <td rowspan="5"> travel
+  <tr><td>1400<td class="eat">Lunch 
+  <tr><td>1500<td rowspan="4" class="activity">Lost Word Tour<td rowspan="4" class="free"> travel
+  <tr><td>1600 
+  <tr><td>1700 
+  <tr><td>1800<td rowspan="1"> travel
+  <tr><td>1900<td colspan="3" class="activity">Dinner
+  <tr><td>2000<td rowspan="2" > free time<td rowspan="2"><td rowspan="2" class="eat"> travel 
+  <tr><td>2100 
+</table>
+</section>
+
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Miguel Tafur">
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+<title>Day1, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+
+<!-- este dia Despues de histalarse en hotel ir al centro historico -->
+
+<header>
+<a href="index.html"><img src="/images/caLogo.png" alt="ca logo" title="Code Avengers"></a>
+
+<nav>
+ <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+</nav>
+
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+<h1>Day 1 Activities</h1>
+<article>
+  <h2>Castillo de San felipe</h2>
+  <p>El Castillo San Felipe de Barajas es una fortificación localizada en la ciudad de Cartagena de Indias en Colombia. Su nombre real es Fuerte de San Felipe de Barajas.
+  <p> Está situado sobre un cerro llamado San Lázaro y fue construido en 1657 durante la época colonial española. 
+  
+  <h2>Recorrido por las murallas y puerto</h2>
+  <p>A partir de su fundación en el siglo xvi y durante toda la época virreinal española, Cartagena de Indias fue uno de los puertos más importantes de la América española.
+  <p>Con el paso del tiempo, Cartagena ha desarrollado su zona urbana conservando el centro histórico y convirtiéndose en uno de los puertos de mayor importancia de Colombia, del Caribe y del mundo, así como un célebre destino turístico.
+</article>
+
+<figure>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.98825822437!2d-75.53927104201634!3d10.422506015588727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f82af0c292b%3A0x56335e1e7a81b1c1!2sCastillo%20de%20San%20Felipe%20de%20Barajas!5e0!3m2!1ses!2sco!4v1638465440319!5m2!1ses!2sco" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+    <figcaption>
+     informacion tomada desde wikipedia  
+    </figcaption>
+</figure>>
+
+<figure>
+    <img width="320" src="https://api.creativecommons.engineering/v1/thumbs/ef1b1eaf-9bde-4d26-bf82-06a62dfcc7c2">  
+    <figcaption>
+    fotografia castillo San felipe
+    </figcaption>
+</figure>
+
+<figure class="video">
+    <iframe width="320" height="240" src="https://www.youtube.com/embed/D-RJ6E87WTo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    <figcaption> 
+    video tomado youtube
+   </figcaption>
+</figure>
+</section>
+
+<!-- 
+<!doctype html> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Miguel Tafur">
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+<title>Day2, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+
+<header>
+<a href="index.html"><img src="/images/caLogo.png" alt="ca logo" title="Code Avengers"></a>
+
+<nav>
+ <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+</nav>
+
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+<!-- este dia Despues del desayuno ir acuario  -->
+<h1>Day 2 Activities</h1>
+<article>
+  <h2>Castillo de San felipe</h2>
+  <p>El Castillo San Felipe de Barajas es una fortificación localizada en la ciudad de Cartagena de Indias en Colombia. Su nombre real es Fuerte de San Felipe de Barajas.
+  <p> Está situado sobre un cerro llamado San Lázaro y fue construido en 1657 durante la época colonial española. 
+  
+  <h2>Recorrido por las murallas y puerto</h2>
+  <p>A partir de su fundación en el siglo xvi y durante toda la época virreinal española, Cartagena de Indias fue uno de los puertos más importantes de la América española.
+  <p>Con el paso del tiempo, Cartagena ha desarrollado su zona urbana conservando el centro histórico y convirtiéndose en uno de los puertos de mayor importancia de Colombia, del Caribe y del mundo, así como un célebre destino turístico.
+</article>
+
+<figure>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.98825822437!2d-75.53927104201634!3d10.422506015588727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f82af0c292b%3A0x56335e1e7a81b1c1!2sCastillo%20de%20San%20Felipe%20de%20Barajas!5e0!3m2!1ses!2sco!4v1638465440319!5m2!1ses!2sco" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+    <figcaption>
+     informacion tomada desde wikipedia  
+    </figcaption>
+</figure>>
+
+<figure>
+    <img width="320" src="https://api.creativecommons.engineering/v1/thumbs/ef1b1eaf-9bde-4d26-bf82-06a62dfcc7c2">  
+    <figcaption>
+    fotografia castillo San felipe
+    </figcaption>
+</figure>
+</section>
+
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Miguel Tafur">
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+<title>Day3, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+
+<header>
+<a href="index.html"><img src="/images/caLogo.png" alt="ca logo" title="Code Avengers"></a>
+
+<nav>
+ <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+</nav>
+
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+<!-- este dia Despues del desayuno ir a un recorrido en la playa  -->
+<h1>Day 3 Activities</h1>
+<article>
+  <h2>Castillo de San felipe</h2>
+  <p>El Castillo San Felipe de Barajas es una fortificación localizada en la ciudad de Cartagena de Indias en Colombia. Su nombre real es Fuerte de San Felipe de Barajas.
+  <p> Está situado sobre un cerro llamado San Lázaro y fue construido en 1657 durante la época colonial española. 
+  
+  <h2>Recorrido por las murallas y puerto</h2>
+  <p>A partir de su fundación en el siglo xvi y durante toda la época virreinal española, Cartagena de Indias fue uno de los puertos más importantes de la América española.
+  <p>Con el paso del tiempo, Cartagena ha desarrollado su zona urbana conservando el centro histórico y convirtiéndose en uno de los puertos de mayor importancia de Colombia, del Caribe y del mundo, así como un célebre destino turístico.
+</article>
+
+<figure>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.98825822437!2d-75.53927104201634!3d10.422506015588727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f82af0c292b%3A0x56335e1e7a81b1c1!2sCastillo%20de%20San%20Felipe%20de%20Barajas!5e0!3m2!1ses!2sco!4v1638465440319!5m2!1ses!2sco" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>  
+    <figcaption>
+     informacion tomada desde wikipedia  
+    </figcaption>
+</figure>>
+
+<figure class="video">
+    <iframe width="320" height="240" src="https://www.youtube.com/embed/D-RJ6E87WTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    <figcaption> 
+    video tomado youtube
+   </figcaption>
+</figure>
+</section>
+
+
+<style>
+/* 
+*miguel tafur : cart_albert@hotmail.com */
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Yatra+One&display=swap'); */
+
+
+body {
+  background-color: lightGreen;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -moz-linear-gradient(right top, rgba(240, 255, 240, .25),rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -o-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: linear-gradient(to left bottom, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+ 
+text-align: center;
+font-family: 'Yatra One', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+   user-select: none;
+   }
+/* falfa abreviar el font*/
+
+h1 {
+  color: rgb(105, 105, 105);
+  font-family: BenchNine, sans-serif;
+  font-size: 25px;
+  text-shadow: 1px 1px 2px white;
+   
+  }
+       
+nav a {
+  background: rgb(124, 252, 0);
+  background-image: -webkit-linear-gradient(lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(lawnGreen, greenYellow);
+  background-image: linear-gradient(lawnGreen, greenYellow);
+  
+  border: 1px solid rgb(50, 205, 50);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(144, 238, 144), inset 0 1px 0 rgb(240, 255, 240);
+  color: rgb(0, 100, 0);
+  display: block;
+  /* font-size 18px; */
+  margin: 10px auto;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px rgb(255, 255, 255);
+  width: 250px;
+ }
+ 
+a:hover {
+  background-image: -webkit-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: linear-gradient(to top, lawnGreen, greenYellow);
+ 
+}
+
+iframe {
+  background-color: white;
+  border: none;
+  }
+
+article {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  text-align: left;
+  }
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  }
+
+figure{
+  margin: 10px 5px;
+  padding: 5px 0px;
+  border-bottom: 1px gray dotted; 
+  border-top: 1px gray dotted;
+  color: gray;
+  text-align: center;
+}
+
+iframe{
+  background-color: white; 
+  border: none;
+}
+
+table{
+   border: 3px solid royalBlue;
+  border-collapse: collapse;
+  background: rgb(30, 38, 12);
+  color: rgb(191, 187, 128);
+}
+
+td,
+th{
+  border: 1px solid rgb(191, 187, 128);
+  padding: 3px;
+}
+
+.activity {
+  background-color: rgb(242, 255, 145);
+  color: rgb(0, 0, 0);
+} 
+
+.eat,
+.free,
+.other {
+   background-color: rgb(255, 255, 255);
+}
+
+footer, 
+header,
+section {
+  left: 0px;
+  padding: 5px;
+  position: fixed;
+  right: 0px;
+}
+
+header,
+footer {
+   background-color: rgb(120, 255, 120);
+   border: 2px solid rgb(223, 71, 191);
+   opacity: 0.7;
+}
+
+footer {
+  bottom: 0px;
+}
+
+header {
+  top: 0px;
+}
+
+section {
+  bottom: 30px;
+  top: 50px;
+  overflow: auto;
+}
+
+header a {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px;
+  width: 50px;
+}
+
+header nav {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header:hover {
+  opacity: 1;
+}
+@media print {
+  section { 
+  position: static;
+  }
+   header, 
+  footer { 
+    display: none;
+  }
+  audio,
+  header,
+  footer,
+  .video { 
+    display: none;
+  }
+  article {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
+}
+
+</style>

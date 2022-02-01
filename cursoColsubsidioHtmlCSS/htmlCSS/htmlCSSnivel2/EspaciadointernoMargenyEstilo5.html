@@ -1,0 +1,51 @@
+*Imágenes con estilo En esta lección vas a agregar espacio alrededor de los elementos HTML utilizando las propiedades CSS de margin y padding.
+*padding y margin La propiedad padding agrega espacio entre la imagen y su borde. La propiedad margin agrega espacio fuera del borde de la imagen.
+*Versión larga de padding y margin La propiedad padding es la versión corta para establecer padding-top, padding-right, padding-bottom y padding-left 
+de manera separada.
+La propiedad margin es la versión corta para establecer margin-top, margin-right, margin-bottom y margin-left.
+*Versión corta de padding y margin Existen cuatro versiones cortas de la propiedad padding. Aquí presentamos los ejemplos de cada una:
+padding: 1px 2px 3px 4px; establece top a 1px; right 2px; bottom 3px; left 4px.
+padding: 1px 2px 3px; top 1px; right & left 2px; bottom 3px.
+padding: 1px 2px; top & bottom 1px; right & left 2px.
+padding: 1px; top, right, bottom & left 1px.
+Las mismas reglas aplican a la propiedad margin.
+*Invalidar reglas Si estableces dos valores o más para la misma propiedad, el que aparece al final es el que se utiliza. Por ejemplo:
+
+img {
+  padding: 4px;
+  padding: 8px;
+} 
+
+
+
+<!doctype html>
+<title>Test page</title>
+<style>
+img {
+  background-color: red;
+  border: 4px solid blue;
+  padding: 0 2px 4px 8px;
+  padding-top: 24px;
+  margin: 12px 6px;
+  margin-top: 24px;
+  width: 100px;
+/* 
+versuion larga
+  background-color: red;
+  border: 4px solid blue;
+  padding-top: 0px;
+  padding-right: 2px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  margin-top: 12px;
+  margin-right: 6px;
+  margin-bottom: 12px;
+  margin-left: 6px;
+  width: 100px; */
+}
+</style>
+
+<img src="/images/daughter10.jpg">
+<img src="/images/daughter11.jpg">
+<img src="/images/daughter12.jpg">
+<img src="/images/daughter13.jpg">

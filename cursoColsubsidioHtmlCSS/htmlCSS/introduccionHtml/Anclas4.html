@@ -1,0 +1,95 @@
+<!-- *Enlace a otro sitio web.Los artículos de Wikipedia contienen palabras en blue en las que puedes hacer clic para saltar
+a los artículos relacionados. Esos enlaces entre artículos se crean con etiquetas de ancla <a>. Nuestra page1.html usa 
+una etiqueta <a> para enlazar la palabra Nintendo a su página de Wikipedia. Este es el código:
+
+<a href="http://en.wikipedia.org/wiki/Nintendo"> Nintendo </a>El atributo href de la etiqueta de ancla indica 
+la dirección que abre tu navegador web cuando se hace clic en el texto del ancla.
+*Anclar a páginas de una carpeta diferente
+*Enlace a páginas de la misma carpeta
+Las anclas a páginas de otros sitios web necesitan que href tenga asignada una dirección completa,
+como http://wikipedia.org/wiki/Mario
+Sin embargo, los enlaces entre páginas de la misma carpeta del mismo sitio web solo necesitan el nombre del archivo.
+*Cuando pones enlaces a páginas web que están en carpetas diferentes del mismo sitio web, el valor href comienza con / seguido
+de la carpeta y el nombre del archivo.
+*Anclar a la página de inicio. Para enlazar a la página de inicio de tu sitio web, puedes usar:
+INSERT <a href="/">Homepage</a>
+*Repaso de anclas Hagamos un repaso rápido de los cuatro tipos de enlaces de esta lección.
+-Los enlaces a páginas de otros sitios web usan el URL completo.
+INSERT<a href="http://wikipedia.org"> Wikipedia </a>
+-Los enlaces a páginas de la misma carpeta solo usan el nombre del archivo.
+INSERT <a href="page2.html"> Mario </a>
+-Los enlaces a páginas de una carpeta diferente comienzan con / seguido de la carpeta y la ruta del archivo.
+INSERT <a href="/wiki/index.html"> Index </a>
+-Para enlazar a la página de inicio de un sitio web, hay que establecer href en /.
+INSERT <a href="/"> Homepage </a -->
+
+
+    <!doctype html>
+    <title>Deportes: futbol</title>
+    
+    <link rel="stylesheet" href="/css/wiki.css">
+    <link rel="stylesheet" href="my-wiki.css">
+    
+        <img width="50" src="/images/wiki-jr.png">
+        
+    <a href="/wiki/index.html"> Index </a>|
+    <a href="https://es.wikipedia.org/wiki/Liga_de_Campeones_de_la_UEFA">Wikipedia</a>|
+    <a href="page2.html">Clases De Eventos Deportivos</a>
+       
+        
+      <h1>Futbol</h1>
+    
+        <h2>Informacion Basica</h2>
+        <p>Es uno de los deportes mas populares en el mundo, tanto asi que muchos programas de television se decican a hablar de este tema.</p>
+    
+        <h3> Trofeo de copa mundial de Futbol</h3><a href="https://es.wikipedia.org/wiki/Archivo:Trofeo_UEFA_Champions_League.jpg">Wikipedia</a>
+        <img width = "180" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Tour_da_Ta%C3%A7a_da_Copa_do_Mundo_%2814231974005%29.jpg/245px-Tour_da_Ta%C3%A7a_da_Copa_do_Mundo_%2814231974005%29.jpg">
+    
+        <h3>Demostracion de futbol profesional</h3>
+        <iframe width="280" height="190" src="https://www.youtube.com/embed/ZJIJAimGk0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+        <p>Ademas es normal ver praticar este deporte en muchas culturas en el mundo, por presonas de toda clase.</p>
+        
+    <a href="/">Powered by Code Avengers.</a>  
+    <img width="100" src="/images/ca-logo.png">
+
+
+
+
+    <!doctype html>
+<title>Clases de eventos Deportivos</title>
+<link rel="stylesheet" href="/css/wiki.css">
+<link rel="stylesheet" href="my-wiki.css">
+
+<img width="50" src="/images/wiki-jr.png">
+
+<a href="/wiki/index.html"> Index </a>|
+<a href="https://es.wikipedia.org/wiki/Liga_de_Campeones_de_la_UEFA"> Wikipedia </a>|
+<a href="page1.html">futbol</a>
+
+
+    <h1> Champions league</h1>
+    <h2> Descripcion</h2>
+        <p> Es uno de los torneos mas llamativos ya que cada año estan los mejores equipos de las ligas de españa, francia, alemania, italia, inglatera y otros paises</p>
+
+        <p>El sitema de juego es por grupos y posteriormente es una serie de partidos ida y vualta referente a los equipos que van pasando de ronda hasta la gran final que es a unico partido</p>
+    <h3>Fotografia del trofeo al ganador final</h3>
+        <img width = "180" src= "https://upload.wikimedia.org/wikipedia/commons/c/c5/Trofeo_UEFA_Champions_League.jpg">
+<a href="/">Powered by Code Avengers.</a> 
+<img width="100" src="/images/ca-logo.png">
+
+
+
+<style>
+html{
+  background-image: url(/images/textures/light8.png);
+  
+  color: darkOliveGreen;
+}
+h1{ 
+  color: dodgerblue; 
+  }
+h2{
+  color: slateGray;
+  }
+</style>

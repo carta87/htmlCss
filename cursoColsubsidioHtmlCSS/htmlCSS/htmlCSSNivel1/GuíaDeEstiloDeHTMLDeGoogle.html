@@ -1,0 +1,32 @@
+<!-- *Uso de mayúsculas Seguir una guía de estilo hace que leer su código sea más fácil para los demás (¡y para usted mismo en el futuro!). En esta lección cubriremos algunas
+convenciones de la Guía de estilo de Google . Los nombres de etiquetas y atributos de HTML no distinguen mayúsculas de minúsculas;pueden estar en minúscula, MAYÚSCULAS o mAyÚsCuLaS y MiNúScUlAs.
+Sin embargo, la Guía de estilo de Google recomienda usar minúsculas para todos los nombres de etiquetas y atributos, excepto para doctype, que puede ser <!DOCTYPE html> o <!doctype html>.
+*Comillas alrededor de valores de atributos " " En línea 3, los valores de los atributos están rodeados por comillas simples ' en lugar de comillas dobles " .
+En línea 4, el valor de atributo rel no está entre comillas. Las reglas HTML permiten esto, pero la Guía de estilo de Google recomienda siempre rodear los valores de los atributos con comillas dobles ".
+*<html>, <head> y <body>La mayoría del código HTML contiene tres etiquetas que aún no hemos utilizado: html , head y body. Las etiquetas son opcionales y la Guía de
+ estilo de Google recomienda omitir las etiquetas opcionales.Puede ver cómo se utilizan en el code, y lea más sobre ellas debajo de las instrucciones.
+ <html> es un elemento opcional que se coloca justo después del doctype y envuelve el resto del código de la página web.
+<head> es una etiqueta opcional que se coloca justo después de la etiqueta inicial html; contiene etiquetas que no aparecen en la página web, por ejemplo el título, enlace y metaetiquetas.
+ <body>es un elemento opcional que se coloca inmediatamente después del elemento head.
+*Etiquetas de cierre opcionales Hemos aprendido que los elementos HTML pueden tener etiquetas de inicio y de cierre. Algunos elementos solo tienen etiqueta de apertura, 
+p. ej., <br> y <img src="/images/logo.png">.Otros elementos tienen una etiqueta de cierre opcional, p. Ej. <li> y <p> . Como la Guía de estilo de Google recomienda no usar las etiquetas opcionales, no las utilizamos.
+*Comentarios:   HTML tiene una etiqueta especial , que se usa para agregar comentarios al código que no se muestran en la página.
+Uno de los usos de los comentarios es explicar la finalidad del código para que a su equipo le resulte más fácil editarlo en una fecha posterior. -->
+
+<!doctype html>
+
+<!-- This is the head section, these are NOT shown on the page -->
+<title>Code Avengers, diferencias de HTML</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="/css/article.css">
+
+<!-- This is the body section, this IS shown on the page -->
+<h1>Diferencias</h1>
+<h2>Comentarios</h2>
+<p>Los comentarios se usan para:
+<ul>
+  <li>explicar el propósito de su código a su equipo;
+
+  <li>oculte el código que quizás quiera volver a mostrar más tarde.
+
+</ul>

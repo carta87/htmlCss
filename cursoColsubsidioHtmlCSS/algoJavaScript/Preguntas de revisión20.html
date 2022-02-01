@@ -1,0 +1,60 @@
+<!-- *Elementos del formulario hidden
+En esta tarea vas a aprender acerca de un tipo de entrada especial llamado hidden .
+Las entradas hidden tienen su tipo establecido a hidden, y son visibles al usuario. Son usados para 
+enviar información extra cuando un formulario es enviado al servidor.
+<input name="name" type="hidden" value="some data">
+
+*Presentando getElementById
+En el código JavaScript en este curso, has usado ids de elementos como nombres de variables para los las 
+cajas de entrada y botones. Por ejemplo, el código en línea 9 establece el color de fondo de la 1er caja
+de entrada a red.Este método es suficientemente bueno para aplicaciones sencillas, pero no es recomendado 
+para aplicaciones más complejas. Las razones para esto son bastante técnicas.Una manera común de establecer 
+una variable a un elemento HTML es usar la función document.getElementById. -->
+
+<!doctype html>
+<title>Log in page</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+button {
+  font-size: 16px;
+}
+</style>
+
+<h1>Log in</h1>
+
+<form action="/action/secretLogin">
+  <label for="emailInput">Email</label> <input id="emailInput" name="email" title="Enter your email address" required type="email"><br>
+  <label for="passwordInput">Password</label> <input id="passwordInput" name="password" title="Enter a password with at least 5 letters or numbers" type="password" pattern="\w{5,}">
+  <input name="failureEmail" type="hidden" value="Incorrect email">
+  <input name="failurePassword" type="hidden" value="Incorrect password">
+
+
+
+  <!-- //<!doctype html> -->
+
+<input id="redInput">
+<input id="blueInput">
+<input id="yellowInput">
+<input id="greenInput">
+
+<script>
+redInput.style.backgroundColor = 'red';
+
+var blueBox = document.getElementById('blueInput');
+blueBox.style.backgroundColor = 'blue';
+
+var yellowElement = document.getElementById('yellowInput');
+yellowElement.style.backgroundColor = 'yellow';
+
+var greenInput = document.getElementById('greenInput');
+greenInput.style.backgroundColor = 'green';
+</script>

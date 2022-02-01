@@ -1,0 +1,94 @@
+<!-- *Introducción al diseño web sensible
+Los teléfonos inteligentes y las tabletas han cambiado la manera en la que los diseñadores crean los sitios web.
+El objetivo es codificar un sitio web que ofrezca la mejor experiencia de usuario en cualquier dispositivo: desde una 
+computadora de escritorio con un monitor grande hasta un celular con una pantalla pequeña.
+La clave para lograr esto es usar un diseño web sensible.
+En esta lección, aprendiste cómo el «diseño web sensible» usa consultas de medios para adaptar el contenido de tu página web
+a los diferentes anchos de navegador. Puedes ver un ejemplo debajo de las instrucciones.
+Nota: Por defecto, el resultado de códigos para la mayoría de las lecciones desde aquí hasta el final de este curso será en 
+vista para tabletas. Se recomienda completar estas lecciones con un dispositivo que tenga una pantalla de al menos 1280 
+píxeles de ancho.
+
+*Usar @media para configurar los estilos para una pantalla pequeña
+En la tarea anterior, agregamos una consulta de medios que aplica un estilo específico a nuestra página web cuando se
+muestra en una pantalla de teléfono. Una consulta de medios es simplemente una pregunta que se le hace al navegador web.
+La que agregamos en la última tarea consulta: "¿La pantalla es de 433 píxeles de ancho?" Si la respuesta es "sí", 
+el navegador carga los estilos dentro de la consulta para establecer el fondo en celeste.
+Una manera de usar una consulta de medios es incrustar la consulta directamente en nuestra hoja de estilos o entre etiquetas
+style. El formato se ve así:
+
+@regla de medios - consulta - reglas de CSS
+
+@media (query) {
+  /* CSS Rules used when query matches */
+}
+La regla @media funciona como contenedor de todas las reglas de estilo que se aplican si la consulta se responde 
+como verdadera.
+
+*Usar la consulta max-width
+Hay varios tipos de consultas que podemos usar.
+En la tarea anterior, usamos el width, configurado en 433 píxeles. Esto significó que las reglas de CSS en nuestra
+consulta de medios solo se aplicarían a la página web si el ancho del navegador fuera exactamente 433 píxeles.
+Usar max-width, por el contrario, es más flexible. La propiedad max-width aplica las reglas de CSS cuando el ancho del
+navegador es menor que o igual al valor definido en la consulta:
+
+@media only screen and (max-width: 440px){
+Esto significa que, cualesquiera sean los estilos dentro de la consulta de medios, se aplicarán si el dispositivo es menor
+o igual a 440 píxeles.
+
+*Usar la consulta min-width
+Una consulta para min-width establece los estilos específicos cuando el ancho del navegador es mayor que o igual al valor en la consulta:
+
+@media only screen and (min-width: 440px){
+Esto aplicará los estilos cada vez que el ancho del dispositivo sea 440 píxeles o mayor. Puedes ver un ejemplo de esto
+debajo de las instrucciones. Si queremos configurar estilos específicos para pantallas pequeñas, podemos usar max-width.
+A veces, es más fácil establecer estilos específicos para las pantallas grandes (por ejemplo, si la mayoría de los usuarios 
+usarán el sitio desde un teléfono); por lo tanto, podemos usar min-width para las cosas que debemos cambiar para las 
+pantallas grandes.
+
+*ombinar max-width y min-width
+También podemos combinar max-width y min-width para establecer las reglas de estilo para las pantallas entre 2 tamaños:
+@media only screen and (max-width: 865px) and (min-width: 440px) {
+Esto aplicará los estilos dentro de la consulta de medios cada vez que el ancho del dispositivo sea de entre 440 y 865
+píxeles. Puedes ver un ejemplo de esto debajo de las instrucciones. -->
+
+
+<!doctype html>
+<title>Consulta-Medios</title>
+<link rel="stylesheet" href="css/media-query.css">
+
+<style>
+body {
+  background-color: coral;
+  padding: 30px;
+}
+
+p {
+  font: 40px Times;
+}
+
+h1 {
+  font: 110px arial, sans-serif;
+  margin:0;
+}
+
+
+@media only screen and (max-width: 865px) and (min-width: 440px){
+  
+  body {
+    background-color: lightblue;
+    width: 80%;
+  } 
+ 
+  p {
+    background-color: pink;
+    color: grey;
+    font-size: 150%;
+  }
+}
+
+</style>
+
+<h1>Consultas de medios</h1>
+
+<p>Usamos las consultas de medios para aplicar estilos específicos según el ancho y la altura del navegador.

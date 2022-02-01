@@ -1,0 +1,76 @@
+<!-- *Establecer el estilo usando las reglas de etiquetas
+En esta lección, analizaremos CSS tag, class y los selectores id, y cómo afectan los estilos en una página básica.
+ Cada regla de CSS tiene 3 partes:
+
+El selector]] CSS [[#,selector| selecciona para qué elementos HTML establece el estilo esa regla. 
+Primero revisemos los tag selectores.
+Cuando defines el estilo de tag, por ejemplo, body o p, todos sus niños tendrán el mismo estilo hasta que establezcas
+estilos específicos para ellos
+
+*Usar selectores id
+Un selector de ID de CSS se usa para definir el estilo de un elemento con un atributo de identificación específico.
+ Por ejemplo, el código de imagen a continuación tiene id establecido como profileImage:
+
+<img id="profileImage" src="...">
+Esta regla de CSS agrega un red borde a la imagen del perfil:
+
+#profileImage {
+  border: solid 1px red;
+}Los selectores de
+CSS id comienzan con #, seguido del nombre de id. No te preocupes si te olvidas de que los selectores de clase
+comienzan con . y que los selectores de id comienzan con #. Usarás mucho estos selectores, así que los recordarás muy pronto.
+
+*Diferencias entre los selectores class y id
+Hay algunas diferencias entre las clases y los ID:
+
+Una clase se puede usar con varios elementos de HTML. Por ejemplo, los párrafos 2 y 3 tienen la clase orangeText asignada
+a ellos. Los elementos de HTML pueden tener más de una sola clase. Por ejemplo, párrafo 3 tiene los valores de 
+clase darkBackground y orangeText asignados a él, lo que le da al párrafo un texto orange y un fondo black.
+Un ID solo se puede usar con un elemento de HTML. Un elemento puede tener solo un ID.
+
+*Prioridades de selector CSS
+Si un elemento tiene «dos clases» destinadas a la «misma propiedad» (por ejemplo, el color del texto), 
+la regla que aparece «última» en el código de CSS tiene prioridad. ElPárrafo 1 en el editor de color tiene dos clases:
+orangeText y purpleText. El texto es purple en el teléfono porque, en el código CSS, la regla .purpleText (en líneas 19‑21)
+ viene después de la regla .orangeText (en líneas 14‑17).
+Si un elemento tiene un atributo id y uno class, la regla de CSS para id tiene prioridad respecto de la regla class.
+Por ejemplo, párrafo 4 tiene texto red porque la regla de ID #redText tiene prioridad respecto de la clase orangeText.
+
+*Errores comunes con atributo y selectores
+Se cometen algunos errores comunes al usar los selectores id y class. Se debe prestar atención a 2 cosas:
+Las minúsculas deben coincidir; por lo tanto, si tu ID o clase está en minúscula en tu HTML, también debe estar en minúscula en tus reglas de CSS; por ejemplo, yellow no es igual a Yellow.
+Si hay un espacio antes o después de un valor id en el HTML, id se ignorará. P. ej.: id=" mistake".-->
+
+<!doctype html>
+<title>Adding Style</title>
+
+<style>
+body {
+  font-family: sans-serif;
+  font-size: 26px;
+}
+
+#redText {
+  color: red;
+}
+#lightBackground {
+  background: yellow;
+} 
+.orangeText {
+  color: orange;
+  background-color: lightBlue;
+}
+
+.purpleText {
+  color: purple;
+}
+
+.darkBackground {
+  background-color: black;
+}
+</style>
+
+<p id="redText" class="orangeText purpleText">Paragraph 1
+<p id="lightBackground"  class="orangeText">Paragraph 2
+<p class="darkBackground orangeText">Paragraph 3
+<p id="redText" class="darkBackground orangeText">Paragraph 4

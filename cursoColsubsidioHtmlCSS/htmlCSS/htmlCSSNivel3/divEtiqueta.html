@@ -1,0 +1,342 @@
+<!-- *Agregar múltiples elementos <div>
+El elemento <div> se usa para dividir una página web en divisiones — o grupos — de elementos. Podemos usar <div> como
+un elemento de contenedor genérico cuando no hay un elemento semántico adecuado para el trabajo(como <nav> o <section>).
+
+Por ejemplo, podemos usar etiquetas <div> para dividir en secciones los detalles de cada miembro del equipo
+(nombre, imagen y descripción del trabajo):
+    
+    HTML CODE
+    <div>
+    <img src="/images/profile8.png" width=85%>
+    <h3>Jenna Walmsley</h3>
+    escritora, desarrolladora del curso, coordinadora de eventos, diseñadora. 
+    <br>
+    </div>
+
+*Configurar el estilo de los elementos <div>        Demos estilo al elemento <div>.
+        
+        CREAR
+        En blog.css justo antes de consulta de medios de tableta alrededor de línea 179, agrega una regla para el elemento div 
+        con los siguientes estilos:
+        Configura el background-color del elemento <div> en #efefef.
+        Agrega padding de 3% y un bottom margin de 5%.
+        Debajo de esto, crea una regla para imágenes dentro del elemento div con estos estilos:
+        Configura el width de las imágenes en 35%.
+        Agrega un max-width de 150px a las imágenes <div>.
+        Float las imágenes dentro del elemento <div> a left.
+
+*Usar float y clear
+Observa que las imágenes no entran dentro de los elementos gray <div>. Esto se debe a que cada imagen está configurada 
+en float:left, por lo que <div> ignora la imagen y solo rodea el texto. Nuestro elemento break <br> debe estar debajo de 
+la imagen, pero, debido a que la imagen está configurada en float:left, el elemento <br> fluye al lado de la imagen junto
+con el texto.Si asignamos la propiedad CSS clear a <br>, podemos controlar cómo los elementos flotantes flotan alrededor de 
+<br>.
+
+clear: left significa que los elementos no pueden flotar del lado izquierdo del elemento <br>.
+clear: right es al revés.
+clear: both significa que ningún elemento puede flotar en cualquier lado de <br>.
+Esto fuerza nuestra imagen a flotar arriba del elemento <br>, para que nuestro gray <div> envuelva la imagen completamente. -->
+
+
+    <!doctype html>
+    <title>CSS Professionals: About</title>
+    <link rel="stylesheet" href="blog.css">
+    
+    
+    
+    <section>
+    <h1>About Us</h1>
+    <p>esta es una iformacion acerca del contenido de una paguina web 
+    
+    <h2>The team</h2>
+    <div>
+      <img src="/images/profile1.png">
+      <h3>nicolas avengers</h3>
+      este es uno de los miebors mas
+      de astados del grupo
+      <br>
+    </div>
+    
+    <div>
+      <img src="/images/profile3.png">
+      <h3>nicolas avengers</h3>
+      este es uno de los miebors mas deastados del grupo
+      <br>
+    </div>
+    
+    <div>
+      <img src="/images/profile4.png">
+      <h3>nicolas avengers</h3>
+      este es uno de los miebors mas deastados del grupo
+      <br>
+    </div>
+    </section>
+    
+<style>
+
+@import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css2?family=julius+Sans+One);
+
+article {
+  background-color: #fff;
+  width: 70%;
+}
+
+section {
+  background-color: #fff;
+  width: 100%;
+}
+
+article,
+section,
+aside {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5%;
+  vertical-align: top;
+}
+
+article h1, aside h1, section h1 {
+  padding: 2% 0;
+  font-size: 170%;
+  margin: 0;
+}
+
+aside{
+  width: 30%;
+}
+
+body {
+  background-color: #eee;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+figure:hover {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+header,
+footer {
+  background-color: rgb(26, 157, 176);
+  color: #ffffff;
+  padding: 2%;
+  text-align: center;
+}
+
+em {
+  display: block;
+  margin-top: 0.5em;
+}
+
+code{
+  background-color: #eee;
+  font-size: 120%;
+}
+
+html {
+  background-color: #ccc;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 100%
+}
+
+h2 {
+  font-size: 130%;
+  margin: 3% 0 1% 0;
+}
+
+header h1 {
+  font-size: 270%;
+  margin: 2% 0;
+}
+
+html, a {
+  color: #222;
+}
+
+.left {
+  float: left;
+}
+
+.right,
+.left {
+  margin: 2%;
+  width: 30%;
+  min-width: 100px;
+}
+
+.logo {
+  vertical-align: middle;
+}
+
+nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 1% 4%;
+}
+
+nav a:hover {
+  background-color: rgba( 255, 255, 255, .4);
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #32A3CD;
+}
+
+a:hover {
+  color: #097FAB;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #7d32cb;
+}
+
+figure a, figure a:hover{
+  color: #000;  
+}
+
+section img {
+  width: 100%; 
+}
+
+.right {
+  float: right;
+}
+
+h1,
+h2,
+nav,
+footer {
+  font-family: 'julius Sans One', sans-serif;
+  font-weight: bold;
+}
+
+footer img{
+  width: 25%;
+  vertical-align: middle;
+}
+
+nav {
+  background-color: rgba( 255, 255, 255, .4);
+}
+
+figure {
+  border-bottom: 2px solid #ccc;
+  margin: 30px 0;
+}
+
+aside img,
+article img{
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+figcaption {
+  margin: 10px 0;
+}
+
+h3 {
+  margin: 4% auto 2% auto;
+}
+
+article p:first-of-type:first-letter {
+    background-color: #eee; 
+    float: left;
+    font: bold 50px 'Julius Sans One', sans-serif;
+    margin-right: 5px;
+    padding: 0 3px 0 3px;
+}
+
+div {
+  background-color: #efefef;
+  margin-bottom: 5%;
+  padding: 3%;
+}
+
+div img {
+  float: left;
+  margin: 2% 5% 2%  2%;
+  max-width: 150px;
+  width: 35%;
+}
+
+div br {
+  clear: left;
+}
+
+/*For tablets*/
+@media only screen and (max-width:865px){
+  
+  aside {
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+  }
+  
+  article,
+  aside {
+    width: 100%;
+  }
+  
+  figure {
+    background-color: #efefef;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    height: 300px;
+    margin-bottom: 0;
+    padding: 5%;
+    vertical-align: top;
+    width: 46%;
+  }
+  
+  figure:nth-of-type(odd) {
+    margin-right: 4%;
+  }
+  
+  footer img {
+    padding-top: 1%;
+    width: 30%;
+  }
+}
+
+/*For phone*/
+@media only screen and (max-width: 440px){
+  
+  header h1 {
+    font-size: 150%;
+  }
+  
+  figure {
+    display: block;
+    height: auto;
+    padding: 10%;
+    width: 100%;
+  }
+  
+  footer img {
+    width: 45%;
+  }
+  
+  
+  html{
+    font-size: 90%;
+  }
+ 
+  h2 {
+    font-size: 150%;
+  }
+  
+   
+  aside {
+    font-size: 90%;
+  }
+ 
+  
+}
+</style>    

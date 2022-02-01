@@ -1,0 +1,248 @@
+<!-- *Elemento table
+En esta lección agregarás una tabla básica para mostrar tu horario a plan.html. En la siguiente lección harás que se vea bien.
+Aquí está el código para una table simple:
+<table>
+  <tr><th>Encabezado 1<th>Encabezado 2
+  <tr><td>Dato 1<td>Dato 2
+  <tr><td>Dato 3<td>Dato 4
+</table>
+
+*Filas de la tabla y título
+Cada fila de la tabla comienza con <tr> (por su nombre en inglés: table row); el poner </tr> al final de la fila es opcional.
+Cada fila contiene 1 o más cells. Hay 2 tipos de celdas: celdas de datos <td> (la d viene de data) y opcionalmente, terminan 
+con </td>; y celdas de título, que comienzan con <th> (la h viene de header) y opcionalmente, terminan con </th>.
+
+*Atributo rowspan
+Las actividades que toman más de 1 hora deben llenar múltiples celdas. Esto se logra usando el atributo rowspan.
+Por ejemplo, el siguiente código hace que el Lost World Tour cubra 4 horas:
+<tr><td>1500<td rowspan="4">Recorrido por el Mundo Perdido
+
+*Atributo colspan
+El atributo colspan hace que una celda cubra columnas múltiples. -->
+
+
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="author" content="Miguel Tafur">
+<meta name="description" content="plan turistico cartagena viajar">
+<meta name="keywords" content="cartagena, castillo, murralla, mar">
+
+<!-- /miguel tafur : cart_albert@hotmail.com/ -->
+<!-- TODO: agregar una table con la agenda diaria -->
+<title>Plan, Code Avengers Travel</title>
+<link rel="stylesheet" href="styles.css">
+<header>
+<a href="index.html"><img src="/images/caLogo.png" alt="ca logo" title="Code Avengers"></a>
+
+<nav>
+ <a href="plan.html">Plan</a><a href="day1.html">Day 1</a><a href="day2.html">Day 2</a><a href="day3.html">Day 3</a>
+</nav>
+
+</header>
+
+<footer> Created by Miguel Tafur</footer>
+
+<section>
+<h1>plan Activities</h1>
+<table>
+  <tr><th>Time<th><a href="day1.html">Day 1</a><th><a href="day2.html">Day 2</a><th><a href="day3.html">Day 3</a>
+  <tr><td>0800<td rowspan="2" class="other"> travel<td rowspan="5"> travel<td rowspan="4" class="activity"> travel
+  <tr><td>0900
+  <tr><td>1000<td rowspan="2"class="activity">Haggas Honking Holes
+  <tr><td>1100 
+  <tr><td>1200<td rowspan="2"> free time<td rowspan="3" class="free"> travel
+  <tr><td>1300  <td rowspan="5"> travel
+  <tr><td>1400<td class="eat">Lunch 
+  <tr><td>1500<td rowspan="4" class="activity">Lost Word Tour<td rowspan="4" class="free"> travel
+  <tr><td>1600 
+  <tr><td>1700 
+  <tr><td>1800<td rowspan="1"> travel
+  <tr><td>1900<td colspan="3" class="activity">Dinner
+  <tr><td>2000<td rowspan="2" > free time<td rowspan="2"><td rowspan="2" class="eat"> travel 
+  <tr><td>2100 
+</table>
+</section>
+
+<style>
+
+    /*miguel tafur : cart_albert@hotmail.com*/
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Yatra+One&display=swap');
+
+
+body {
+  background-color: lightGreen;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -moz-linear-gradient(right top, rgba(240, 255, 240, .25),rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: -o-linear-gradient(right top, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+  background-image: linear-gradient(to left bottom, rgba(240, 255, 240, .25), rgba(144, 238, 144, .75)), url(/images/textures/light1.png);
+ 
+text-align: center;
+font-family: 'Yatra One', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+   user-select: none;
+   }
+/* falfa abreviar el font*/
+
+h1 {
+  color: rgb(105, 105, 105);
+  font-family: BenchNine, sans-serif;
+  font-size: 25px;
+  text-shadow: 1px 1px 2px white;
+   
+  }
+       
+nav a {
+  background: rgb(124, 252, 0);
+  background-image: -webkit-linear-gradient(lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(lawnGreen, greenYellow);
+  background-image: linear-gradient(lawnGreen, greenYellow);
+  
+  border: 1px solid rgb(50, 205, 50);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(144, 238, 144), inset 0 1px 0 rgb(240, 255, 240);
+  color: rgb(0, 100, 0);
+  display: block;
+  font-size:18px;
+  margin: 10px auto;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px rgb(255, 255, 255);
+  width: 250px;
+ }
+ 
+a:hover {
+  background-image: -webkit-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -moz-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: -o-linear-gradient(bottom, lawnGreen, greenYellow);
+  background-image: linear-gradient(to top, lawnGreen, greenYellow);
+ 
+}
+
+iframe {
+  background-color: white;
+  border: none;
+  }
+
+article {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  text-align: left;
+  }
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  }
+
+figure{
+  margin: 10px 5px;
+  padding: 5px 0px;
+  border-bottom: 1px gray dotted; 
+  border-top: 1px gray dotted;
+  color: gray;
+  text-align: center;
+}
+
+iframe{
+  background-color: white; 
+  border: none;
+}
+
+table{
+   border: 3px solid royalBlue;
+  border-collapse: collapse;
+  background: rgb(30, 38, 12);
+  color: rgb(191, 187, 128);
+}
+
+td,
+th{
+  border: 1px solid rgb(191, 187, 128);
+  padding: 3px;
+}
+
+.activity {
+  background-color: rgb(242, 255, 145);
+  color: rgb(0, 0, 0);
+} 
+
+.eat,
+.free,
+.other {
+   background-color: rgb(255, 255, 255);
+}
+
+footer, 
+header,
+section {
+  left: 0px;
+  padding: 5px;
+  position: fixed;
+  right: 0px;
+}
+
+header,
+footer {
+   background-color: rgb(120, 255, 120);
+   border: 2px solid rgb(223, 71, 191);
+   opacity: 0.7;
+}
+
+footer {
+  bottom: 0px;
+}
+
+header {
+  top: 0px;
+}
+
+section {
+  bottom: 30px;
+  top: 50px;
+  overflow: auto;
+}
+
+header a {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px;
+  width: 50px;
+}
+
+header nav {
+  display: inline-block;
+  vertical-align: top;
+}
+
+header:hover {
+  opacity: 1;
+}
+@media print {
+  section { 
+  position: static;
+  }
+   header, 
+  footer { 
+    display: none;
+  }
+  audio,
+  header,
+  footer,
+  .video { 
+    display: none;
+  }
+  article {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+  }
+}
+
+
+</style>

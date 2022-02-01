@@ -1,0 +1,46 @@
+<!-- Agrega el atributo required
+Cuando un usuario hace clic en el botón "log in", debe mostrar un mensaje de error si dejaron las cajas de entrada en blanco.
+Para hacer que esto pase, deberás usar el atributo required.
+Por ejemplo: <input required> obliga al usuario a introducir por lo menos un carácter antes de poder enviar el formulario.
+
+Agrega atributos title
+Cuando introduzcas una contraseña que sea muy corta, el mensaje de error no es de mucha ayuda.
+
+Para hacer más útil el mensaje, puedes agregar un mensaje al title de la caja de entrada. Este mensaje se muestra 
+como una descripción emergente cuando colocas el puntero sobre la caja de entrada, y al final de los mensajes de error.
+
+Usa * y + en las expresiones regulares
+El regex \d{1,} iguala uno o más dígitos. Ya que es muy común, + es usado como una abreviación de {1,} para igualar
+uno o más de algo. También, * es una abreviación de {0,} e iguala cero o más de algo.
+
+Por ejemplo, 021\d+ iguala los números de teléfono de 4 dígitos que comiencen con 021; a\w* iguala cualquier palabra
+que comienza con la letra a, incluyendo la palabra a.
+
+Usa el atributo placeholder
+El atributo placeholder es usado para dar al usuario un ejemplo del formato correcto que debe introducir en la caja -->
+
+<!doctype html>
+<title>Log in form</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+</style>
+
+<h1>Login Form</h1>
+
+<form>
+  <label for="emailInput">Email</label>
+  <input id="emailInput" pattern="[a-zA-Z]\w*@codeavengers.com" required title="Enter your Code Avengers email address" placeholder="e.g. mike@codeavengers.com" type="email"><br>
+  
+  <label for="passwordInput">Password</label>
+  <input id="passwordInput" pattern=".+" required title="Enter a password with at least 6 letters" placeholder="ab+1-9@.com" type="password"><br>
+  
+  <p><button>Log in</button>
+</form>

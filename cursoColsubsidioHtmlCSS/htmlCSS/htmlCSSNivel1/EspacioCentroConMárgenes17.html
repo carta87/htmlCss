@@ -1,0 +1,115 @@
+*
+*La propiedad margin La propiedad CSS margin se usa para agregar espacio alrededor de elementos de HTML. Hay cuatro propiedades de margen: 
+margin-top, margin-right, margin-bottom, margin-left.
+Su navegador web agrega automáticamente un espacio de margen por encima y por debajo de los encabezados. Puede cambiar el tamaño de este espacio configurando 
+el margin-top y margin-bottom propiedades.
+*La propiedad abreviada margin Al igual que con font y border , podemos escribir propiedades de margen en forma abreviada utilizando margin .
+Hay varias formas de utilizar la margin propiedad abreviada. Aquí hay 2 de ellas:
+El código margin: 12px; establece los 4 márgenes en 12px.
+El código margin: 9px 8px 7px 6px; establece los márgenes superior, derecho, inferior e izquierdo en ese orden (en el sentido de las agujas del reloj desde la parte superior)
+*Centrado con margin: auto;
+En este momento su página tiene alineación a la izquierda de la pantalla. En esta tarea, aprenderá un truco que centra su página utilizando las propiedadesmargin y width.
+<!doctype html>
+<title>DisrtibucionesE.</title>
+<meta name="viewport" content="width=device-width">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <style>
+  html {
+    background: violet url(/images/textures/dark5a.png);
+    font: blue 16px 'Trebuchet MS', sans-serif;
+    color: 	black;
+    }
+  body{
+    margin: 0 auto 0 auto;
+    width: 400px;
+    }  
+  h1,
+  h2{
+    color: blue;
+    }
+  h1 {
+    font: normal 30px 'Comforter', cursive;
+    
+    text-decoration: underline;
+    margin: 10px;
+    text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px orange, 0px -18px 40px red;
+    }
+  h3 {
+    font: 14px 'Comic Sans MS', cursive;
+    margin: 10px 10px 8px 10px;
+    }
+  a{
+    color: yellow;
+    text-decoration: none;
+    }
+  a:hover {
+    color: blue;
+    text-decoration: underline;
+    }
+  a:visited {
+    color: red;
+    }
+  img {
+    border: 7px solid gold;
+    height: 200px;
+    width: 150px;
+    margin: 10px 20px 10px 0px;
+    box-shadow: 0 0 10px 5px blue;
+    }
+   p {
+    margin: 10px;
+    text-align: justify;
+    }
+   ul {
+    list-style-image: url(/images/icons/icon9.png);
+    }
+    
+  header,
+  footer {
+    background: indigo;
+    border: 2px solid gold;
+    margin: 20px 10px 20px 10px;
+    text-align: center;
+    }
+ 
+ 
+ </style>
+<header>
+  <h1>DistibucionesExpress</h1>
+  <h3>entregas a tiempo record</h3> 
+</header>
+<section>
+  <p>
+<strong>Ubicacion:</strong> Calle 70 n. 18 h 79 <a></a>
+<strong>CorreoEletronico:</strong> cart_albert@hotmail.com<a></a>
+
+<strong>Ubicacion:</strong>Calle 70 n. 18 h 79<br>
+<strong>CorreoEletronico:</strong>cart_albert@hotmail.com<br>
+<strong>Telefono:</strong>3214052511<br>
+<strong>SitioWeb:</strong><a target="_blank" href="https://www.espn.com.co/">espn </a><br>
+<Strong>Facebok:</Strong><a target="_blank" href="https://www.facebook.com/carlos.tafur.108">miguel</a><br>
+<br>
+<img src="https://images.unsplash.com/photo-1637691096396-8535e9498c88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=358&q=80" alt="Primeros años de la empresa">
+<img src="https://images.unsplash.com/photo-1636990536161-710184e1047f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1370&q=80" alt="Nuestro horizonte">
+
+<p>Nuestro desempeño es conocido a nivel nacional ya que nuestra experencia es en varias cuidades del pais
+<p> ademas de nuestra basta experencia en el transcusro de mas de diez año
+<p> De hecho nuestra vision va mas alla para expandinos a otros campos de trabajo
+<br>
+<ul>
+   <li>Entrga  24 horas</li>
+   <li>buena atencion</li>
+   <li>a nivel nacional</li>
+   <li>varias oficionas atencion</li>
+   <li>servicio de monitoreo</li>
+</ul>
+    
+</section>
+<footer>
+    Creado por Miguel Tafur <a href="profile.html">Code Avengers </a>Derechos Reservados  ©2021
+    <br>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="CodeAvengers"
+data-url="https://codeavengers.com/c/codename/business.html">Tweet</a>
+    <script src="/js/twitter.js"></script>
+</footer>

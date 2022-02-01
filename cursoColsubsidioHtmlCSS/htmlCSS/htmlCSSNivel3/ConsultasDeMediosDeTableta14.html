@@ -1,0 +1,382 @@
+<!-- *Ajustar anchos para la vista de tableta
+Regresando a nuestro blog de varias columnas, trabajemos para que el diseño sea más sensible a dispositivos del tamaño 
+de una tableta. En la vista de tableta, es difícil ver las imágenes en la sección "publicaciones recientes". Como una 
+solución, cambiemos nuestro diseño de dos columnas a una.
+
+CREAR
+Realiza lo siguiente mientras trabajas en la vista de tableta:
+
+En blog.css en la consulta de medios de tableta, configura el width de aside y article en 100%.
+Configura width de figure en 46%.
+Configura width de footer image en 30%.
+
+*Alinear el elemento <figure>Cada publicación reciente está dentro de un elemento <figure>. Podemos alinear estos elementos 
+en dos columnas.
+    
+    CREAR Desplázate a la parte inferior de la página en la vista de tableta; luego agrega los siguientes estilos 
+    a la consulta de medios de tableta en blog.css:
+    Alinea verticalmente <figure> a top.
+    Configura la propiedad display para <figure> y inline-block.
+    Configura box-sizing en border-box.
+    Cambia el width a 48%.
+
+*Agregar espacio alrededor de <figure>
+    Ahora que hemos colocado las figuras en 2 columnas, los bordes se tocan unos con otros. Esto se ve amontonado, 
+    así que agreguemos espacio alrededor de cada elemento <figure> para que se vea mejor.
+    
+    CREAR
+    Aún en la consulta de medios de tableta:
+    Agrega padding de 5% a todos los elementos <figure>.
+    Agrega un bottom margin de 0 a todos los elementos <figure>.
+    Da a la imagen footer un top padding de 1%.
+
+*Dar énfasis a <figure>Es hora de dar énfasis a los resúmenes de «publicaciones recientes».
+    
+    CREAR
+    Aún dentro de la consulta de medios de tableta:
+    Cambia el background-color de los elementos <figure> a #efefef.
+    Configura el border de los elementos <figure> en none.
+    Da <figure> un height de 350px.
+    (Opcional) agregar una línea horizontal gray para separar los elementos <article> y <aside>. Para hacerlo,
+    agrega un border al top del elemento <aside>.
+
+*Usar nth-of-type para configurar el margen
+Es difícil notar que las publicaciones recientes en la misma línea son 2 publicaciones diferentes ahora. Para separarlas más
+y hacer que el diseño sea más atractivo, podemos agregar un margin vertical para agregar más espacio entre las publicaciones.
+Podemos hacer esto usando el selector nth-of-type, sobre el que aprendimos en una lección anterior.
+
+CREAR
+Aún dentro de la consulta de medios de tableta:
+
+Agrega el selector figure:nth-of-type(odd) a tu CSS.
+Agrega un right margin de 4% a cada imagen de número impar. -->
+
+<style>
+    @import url(https://fonts.googleapis.com/css2?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css2?family=julius+Sans+One);
+
+article {
+  background-color: #fff;
+  width: 70%;
+}
+
+section {
+  background-color: #fff;
+  width: 100%;
+}
+
+article,
+section,
+aside {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5%;
+  vertical-align: top;
+}
+
+article h1, aside h1, section h1 {
+  padding: 2% 0;
+  font-size: 170%;
+  margin: 0;
+}
+
+aside{
+  width: 30%;
+}
+
+body {
+  background-color: #eee;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+figure:hover {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+header,
+footer {
+  background-color: rgb(26, 157, 176);
+  color: #ffffff;
+  padding: 2%;
+  text-align: center;
+}
+
+em {
+  display: block;
+  margin-top: 0.5em;
+}
+
+code{
+  background-color: #eee;
+  font-size: 120%;
+}
+
+html {
+  background-color: #ccc;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 100%
+}
+
+h2 {
+  font-size: 130%;
+  margin: 3% 0 1% 0;
+}
+
+header h1 {
+  font-size: 270%;
+  margin: 2% 0;
+}
+
+html, a {
+  color: #222;
+}
+
+.left {
+  float: left;
+}
+
+.right,
+.left {
+  margin: 2%;
+  width: 30%;
+  min-width: 100px;
+}
+
+.logo {
+  vertical-align: middle;
+}
+
+nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 1% 4%;
+}
+
+nav a:hover {
+  background-color: rgba( 255, 255, 255, .4);
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #32A3CD;
+}
+
+a:hover {
+  color: #097FAB;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #7d32cb;
+}
+
+figure a, figure a:hover{
+  color: #000;  
+}
+
+section img {
+  width: 100%; 
+}
+
+.right {
+  float: right;
+}
+
+h1,
+h2,
+nav,
+footer {
+  font-family: 'julius Sans One', sans-serif;
+  font-weight: bold;
+}
+
+footer img{
+  width: 25%;
+  vertical-align: middle;
+}
+
+nav {
+  background-color: rgba( 255, 255, 255, .4);
+}
+
+figure {
+  border-bottom: 2px solid #ccc;
+  margin: 30px 0;
+}
+
+aside img,
+article img{
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+figcaption {
+  margin: 10px 0;
+}
+
+h3 {
+  margin: 4% auto 2% auto;
+}
+
+article p:first-of-type:first-letter {
+    background-color: #eee; 
+    float: left;
+    font: bold 50px 'Julius Sans One', sans-serif;
+    margin-right: 5px;
+    padding: 0 3px 0 3px;
+}
+
+div {
+  background-color: #efefef;
+  margin-bottom: 5%;
+  padding: 3%;
+}
+
+div img {
+  float: left;
+  margin: 2% 5% 2%  2%;
+  max-width: 150px;
+  width: 35%;
+}
+
+div br {
+  clear: left;
+}
+
+/*For tablets*/
+@media only screen and (max-width:865px){
+  
+  aside {
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+  }
+  
+  article,
+  aside {
+    width: 100%;
+  }
+  
+  figure {
+    background-color: #efefef;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    height: 300px;
+    margin-bottom: 0;
+    padding: 5%;
+    vertical-align: top;
+    width: 46%;
+  }
+  
+  figure:nth-of-type(odd) {
+    margin-right: 4%;
+  }
+  
+  footer img {
+    padding-top: 1%;
+    width: 30%;
+  }
+}
+
+/*For phone*/
+@media only screen and (max-width: 440px){
+  
+  header h1 {
+    font-size: 150%;
+  }
+  
+  figure {
+    display: block;
+    height: auto;
+    padding: 10%;
+    width: 100%;
+  }
+  
+  footer img {
+    width: 45%;
+  }
+  
+  
+  html{
+    font-size: 90%;
+  }
+ 
+  h2 {
+    font-size: 150%;
+  }
+  
+   
+  aside {
+    font-size: 90%;
+  }
+ 
+  
+}
+</style>
+
+
+<!doctype html>
+<title>Inline-block vs Float|CSS pro's</title>
+<link rel="stylesheet" href="blog.css">
+
+<header>
+	<h1><img class="logo" height="50" src="/images/blog/mylogo.png">
+	CSS Professionals</h1>
+	<nav>
+	  <a href="#">Blog</a>|
+	  <a href="#">About</a>|
+	  <a href="#">tutorials</a>|
+	  <a href="#">Forum</a>|
+	  <a href="#">Facebook</a>
+	</nav>
+</header>
+
+<article>	
+	<h1>Nuestro grafico</h1>
+	<img width="100%" class="right" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Football_iu_1996.jpg/1024px-Football_iu_1996.jpg" alt="foto" title="fotografia"> 
+	<h2>descripcion grafico</h2>
+	<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sagittis lobortis molestie. Phasellus tristique magna a nisi pharetra, ut eleifend tortor commodo. Sed auctor libero non interdum malesuada. Sed volutpat, ante in maximus iaculis, neque magna efficitur elit, eu ultrices est eros rhoncus justo. Donec congue massa nec diam dignissim, at tempor turpis hendrerit. 
+		
+	<img width="100%" class="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Football_iu_1996.jpg/1024px-Football_iu_1996.jpg" alt="foto" title="fotografia" >
+	<h2>descripcion</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec enim euismod ligula commodo congue ut nec risus. Nam finibus pellentesque metus, nec interdum diam gravida nec. Etiam vel lacus efficitur, varius est id, consequat orci. Ut lobortis ultricies accumsan. Nullam fringilla sed elit eget auctor. 
+		
+		<img width="100%" src="/images/icons/image.png" alt="foto" title="fotografia">
+	<p>Ut nisl nulla, congue et quam in, tempus ultrices metus. In laoreet gravida dignissim. Donec tempor vulputate augue, eu tristique tortor. Nulla luctus turpis tempor, lacinia quam in, sagittis augue. Fusce id nulla vitae ligula condimentum dictum eget sit amet augue  
+</article><aside>
+ <h1>Recent Posts:</h1>
+  <figure>
+    <a href="#">
+      <h2>descripcion</h2>
+      <img class="left" src="/images/icons/image.png"alt="foto" title="fotografia">
+      <figcaption>fotografia
+      </figcaption>
+    </a>
+  </figure><figure>
+  	<a href="#">
+  	  <h2>descripcion</h2>
+  	   <img class="left" src="/images/icons/image.png" alt="foto" title="fotografia">
+  	   <figcaption>fotografia
+  	   </figcaption>
+    </a>
+  </figure><figure>
+    <a href="#">
+      <h2>descripcion</h2>
+      <img class="left" src="/images/icons/image.png" alt="foto" title="fotografia">
+      <figcaption>fotografia
+      </figcaption>
+    </a>
+  </figure>
+</aside>
+
+<footer>
+	<img width="200" src="/images/home/icon2.png" alt="foto" title="fotografia">
+</footer>
+
+
+

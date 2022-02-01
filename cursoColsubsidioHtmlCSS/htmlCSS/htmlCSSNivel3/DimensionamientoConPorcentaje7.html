@@ -1,0 +1,241 @@
+<!-- *Tamaños de fuentes predeterminadas de los navegadores
+Los navegadores proporcionan estilos predeterminados para el texto regular y los encabezados cuando no se aplicaron estilos 
+adicionales en CSS. El texto regular incluye el texto dentro de las etiquetas <html>, <body>, <section> y <p>, etc.
+Los navegadores configuran el tamaño de fuente predeterminado de:
+
+Texto regular a 16 píxeles
+h1 a 200% del tamaño de fuente de texto regular.
+(Ver excepciones)
+h2 a 150% del tamaño de fuente de texto regular
+HTML CODE
+<p>párrafo - 16 píxeles
+<h2>h2 - 24 píxeles</h2>
+<h1>h1 - 32 píxeles</h1>WEBPAGE OUTPUT
+
+*Usar % para configurar los tamaños de fuente Veamos cómo establecer el tamaño de fuente relativo con %.
+Como aprendimos antes, h1 los encabezados tienen un tamaño de fuente predeterminado que es 2 veces el tamaño — o un 200 % — del 
+tamaño de fuente para el texto regular, que es de 16 píxeles.
+Si configuramos el tamaño de fuente h1 en 50%, se convierte en la mitad del tamaño del texto regular, u 8 píxeles.
+Si cambiamos el tamaño de fuente del texto regular configurando el html tamaño de fuente en 25px, el tamaño de 
+fuente h1 será del 200 % de este, o 50 píxeles. Puedes ver ejemplos de estos debajo de las instrucciones.
+
+*Tamaños de fuente fijos frente a relativos
+Los tamaños de encabezado son relativos al tamaño de fuente de su elemento primario o contenedor.
+Por ejemplo, al aumentar el tamaño de la fuente del texto dentro de <header>, aumentará el tamaño de la fuente de cualquier
+ encabezado dentro de <header>.
+
+HTML CODE
+<style>
+header {
+ font-size: 20px;
+}
+</style>
+
+<header>
+  Texto regular del encabezado - 20 píxeles
+  <h2>h2 - 30 píxeles</h2>
+  <h1>h1 - 40 píxeles</h1>
+</header>
+
+Texto regular - 16 píxelesWEBPAGE OUTPUT
+
+*Tamaños de fuente de la sección y HTML
+Cualquier texto al que se define el tamaño con % es relativo al tamaño de fuente de su elemento contenedor.
+Supongamos que tenemos dos etiquetas <p>, con una de ellas anidada en un <section>. html font-size se configura en 10px.
+Entonces cambiamos los tamaños de fuente <p> y <section> a 200%. ¿Qué crees que sucederá?
+
+HTML CODE
+<style>
+html {
+  font-size: 10px;
+}
+
+p {
+  font-size: 200%;
+}
+
+section {
+  font-size: 200%;
+}
+</style>
+
+<p>Párrafo - 20 píxeles
+
+<section>
+<p>Párrafo - 40 píxeles
+</section>WEBPAGE OUTPUT
+
+El párrafo fuera de <section> se vuelve de 20 píxeles, ya que es un 200 % más grande que el tamaño de fuente html.
+El párrafo dentro de <section> es de 40 píxeles. Por eso es un 200 % más grande que font-size de <section>,
+ que ahora es de 20 píxeles.
+
+*Usar % para configurar el espaciado
+Podemos usar % para configurar el espaciado]] [[#,padding| para un elemento. Usar % significa que el tamaño de espaciado 
+siempre será un porcentaje del ancho del elemento del contenedor. Cuando cambia el tamaño del elemento, el espaciado cambia con él.
+
+HTML CODE
+<style>
+html, body {
+  margin: 0;
+}
+
+body {
+  background: lightBlue;
+}
+
+section {
+  background: azure;
+  padding: 15%;
+  display: inline-block;
+}
+</style>
+
+<body>
+  <section>
+    No toques el borde.
+  </section>
+</body>WEBPAGE OUTPUT
+
+El tamaño de espaciado para <section> es el 15 % del ancho de su elemento contenedor — <body>. Evita que el texto dentro
+ del cuadro de color claro toque los bordes. -->
+
+
+ <!doctype html>
+<title>Tamaño relativo</title>
+
+<style>
+html{
+  font-size: 28px;
+}
+h1 {
+  font-size: 28px;
+  font-weight: normal;
+  color: rgb(180, 180, 180);
+  
+}
+</style>
+
+
+<h1>Mi familia</h1>
+<h2>Mi primera hija</h2>
+<p>¿No es hermosa?
+
+<h3>Cosas favoritas</h3>
+
+<!-- <!doctype html>     ejercicio2 -->
+<title>Tamaño relativo</title>
+
+<style>
+html {
+  font-size: 20px;
+}
+
+h1 {
+  color: rgb(180, 180, 180);
+  font-size: 160%;
+  font-weight: normal;
+}
+h2 {
+  font-size: 140%;
+}
+h3{
+  font-size: 125%;
+}
+</style>
+
+
+<h1>Mi familia</h1>
+<h2>Mi primera hija</h2>
+<p>¿No es hermosa?
+
+<h3>Cosas favoritas</h3>
+
+<!-- <!doctype html>   ejercicio 3-->
+<title>Tamaño relativo</title>
+
+<style>
+html {
+  font-family: sans-serif;
+  font-size: 25px;
+}
+section {
+  font-size: 10px;
+}
+section h2 {
+  font-size: 250%;
+}
+</style>
+
+
+<h2>Mi primera hija</h2>
+<p>¿No es hermosa?
+
+<hr>
+
+<section>
+  <h2>Mi primera hija</h2>
+  <p>¿No es hermosa?
+</section>
+
+
+<!-- ejercicio 3 -->
+<style>
+    html {
+      font-family: sans-serif;
+      font-size: 10px;
+      margin: 20%;
+    }
+    
+    header {
+     font-size: 50%;
+    }
+    
+    section {
+     font-size: 200%;
+    }
+    
+    h1 {
+     font-size: 400%;
+    }
+    
+    p {
+     font-size: 200%;
+    }
+    </style>
+    
+    <header>
+      <h1>Encabezado</h1>
+      <p>Texto1 de párrafo
+    </header>
+    
+    <section>
+      <p>Texto2 de párrafo
+    </section>
+
+<!-- 
+    <!doctype html> ejercicio 5 -->
+<title>Tamaño relativo</title>
+
+<style>
+html {
+  font-family: sans-serif;
+  font-size: 24px;
+  margin: 20%;
+  padding: 5%;
+}
+
+section {
+  background-color: red;
+  font-size: 12px;
+  padding: 20%;
+}
+</style>
+
+<header>
+  <h1>Mi familia</h1>
+</header>
+
+<section>
+  <h2>Mi primera hija</h2>
+  <p>¿No es hermosa?
+</section>

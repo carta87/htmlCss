@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- *Agrega required y pattern
+Ahora, ayudémosle al usuario a proveer entradas válidas.
+
+*Maneja el evento change
+Cada vez que escribes un carácter en una caja de entrada, el evento input se dispara. Otro evento, llamado change,
+sólo se dispara cuando el usuario sale de una caja de entrada al haber cambiado su valor.
+
+Para esta tarea vas a verificar si las contraseñas son iguales, cada vez que el valor de una de las cajas de contraseña cambia.
+(onchange:almacena una función que se ejecuta cuando se cambia el valor de un elemento de entrada.)
+
+*Usa setCustomValidity para mostrar mensajes de error personalizados
+Una mejor manera de abordar esta situación es mostrando una versión personalizada de la caja de mensaje de error que es 
+mostrada cuando trata de llenar un formulario que contiene entradas inválidas.
+
+Para hacer esto, vas a usar el código:
+inputID.setCustomValidity('Custom error message')
+Para eliminar el error, usarás:
+inputID.setCustomValidity('')
+
+*Establece las propiedades action y name del formulario
+Cuando inicias sesión en un sitio web, tu información se envía al servidor del sitio web para poder verificar si tu 
+nombre de usuario y contraseña son correctos. A fin de poder enviar la información de tu formulario al servidor necesitas
+hacer 2 cosas:
+
+Agrega un atributo action que especifique la dirección de un programa en el servidor que procesará la información en el 
+formulario.
+Agrega atributos name a cada una de las entradas de la página que debe ser enviada al servidor. -->
+
+
+<title>Sign up page</title>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+button {
+  font-size: 16px;
+}
+</style>
+
+<h1>Sign up</h1>
+
+<form action="/action/signup">
+  <label for="nameInput">Name</label> <input id="nameInput"   name="name" title="Enter your name" required><br>
+  <label for="emailInput">Email</label> <input id="emailInput" name="email" title="Enter your email address" required type="email"><br>
+  <label for="userInput">Username</label> <input id="userInput" name="username" title="Enter a username with at least 5 letters or numbers" pattern="\w{5,}"><br>
+  
+  <p>Enter your password twice:
+  <p>
+  <label for="password1">Password</label> <input id="password1"  name="password" title="Choose a password with at least 6 characters"  pattern=".{6,}" type="password">
+  <label for="password2">Password</label> <input id="password2" title="Choose a password with at least 6 characters" pattern=".{6,}" type="password">
+  
+  <p><button>Sign up</button>
+</form>
+
+<script>
+function checkPasswords() {
+  if (password1.value != password2.value) {
+    password1.setCustomValidity('Passwords must match');
+  } else {
+    password1.setCustomValidity('');
+  }
+}
+ 
+password1.onchange = checkPasswords;  
+password2.onchange = checkPasswords;  
+</script>
+
+
+
+
